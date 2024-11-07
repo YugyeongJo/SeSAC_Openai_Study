@@ -1,0 +1,41 @@
+{
+    "title": "AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE",
+    "authors": [
+        "Alexey Dosovitskiy",
+        "Lucas Beyer",
+        "Alexander Kolesnikov",
+        "Dirk Weissenborn",
+        "Xiaohua Zhai",
+        "Thomas Unterthiner",
+        "Mostafa Dehghani",
+        "Matthias Minderer",
+        "Georg Heigold",
+        "Sylvain Gelly",
+        "Jakob Uszkoreit",
+        "Neil Houlsby"
+    ],
+    "main_content": "While the Transformer architecture has become the de-facto standard for natural language processing tasks, its applications to computer vision remain limited. In vision, attention is either applied in conjunction with convolutional networks or used to replace certain components of convolutional networks while keeping their overall structure in place. We show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks. When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring substantially fewer computational resources.",
+    "key_points": [
+        "The Vision Transformer (ViT) demonstrates strong performance in image classification without relying on convolutional neural networks (CNNs).",
+        "ViT outperforms state-of-the-art CNNs when pre-trained on sufficiently large datasets like JFT-300M and ImageNet-21k.",
+        "Transformers applied directly to image patches as sequences show that large pre-trained models excel at classification tasks in various benchmarks.",
+        "ViT achieves an accuracy of 88.55% on ImageNet and outperforms several other benchmarks with fewer computational resources."
+    ],
+    "used_models": [
+        "Vision Transformer (ViT)"
+    ],
+    "topic": "Image Recognition, Computer Vision",
+    "classification": "Transformers for Image Recognition",
+    "publication_year": 2021,
+    "source": "ICLR 2021",
+    "doi": "10.48550/arXiv.2010.11929",
+    "keywords": [
+        "Vision Transformer",
+        "Image Recognition",
+        "Self-Attention",
+        "Computer Vision",
+        "Deep Learning"
+    ],
+    "experimental_results": "ViT achieves 88.55% accuracy on ImageNet and substantial performance improvements on other image classification tasks compared to leading convolutional networks.",
+    "future_research_directions": "Exploring the application of ViT to various computer vision tasks, including detection and segmentation, as well as improving self-supervised learning methods."
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "image_name": "blinker01.jfif",
+        "response": "{\"color_classification\":\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\"}"
+    },
+    {
+        "image_name": "blinker02.jfif",
+        "response": "{\"color_classification\":\"\\n\\textcolor{red}{RED LIGHT}\\n\\textcolor{yellow}{YELLOW LIGHT}\\n\\textcolor{green}{GREEN LIGHT}\"}"
+    },
+    {
+        "image_name": "blinker03.jfif",
+        "response": "{\"color_classification\":\"\\n\\n \\n\\n- Green light indicates that vehicles can proceed, allowing cars to turn left safely.\"}"
+    },
+    {
+        "image_name": "blinker04.jfif",
+        "response": "{\"color_classification\":\"\\n\\n\\n\\n\"}"
+    },
+    {
+        "image_name": "blinker05.jfif",
+        "response": "{\"color_classification\":\"\\\\uc2e0\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nnovation\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\nd\\n\"}"
+    }
+]

@@ -1,0 +1,37 @@
+{
+    "title": "Automatic Soccer Video Summarization Using Deep Learning",
+    "authors": [
+        "Agyeman Rockson"
+    ],
+    "main_content": "Soccer has established itself as one of the most enjoyed sport via media broadcast. Due to its popularity, broadcasters continue to search for the most convenient technique for generating summarised match content. Common among the techniques employed for this purpose is traditional video editing, which is time-consuming and requires great skill. This research, therefore, presents a deep learning approach to soccer video summarization. It leverages the spatiotemporal feature learning ability of three-dimensional (3D) Convolutional Neural Network (CNN) and Long Short-Term Memory (LSTM) – Recurrent Neural Network (RNN). The proposed approach involves 1) a step-by-step search for a three-dimensional Residual Neural Network (3D-ResNet) architecture that learns human actions better than existing benchmark models on UCF101 dataset, 2) manually collecting and annotating 744 soccer clips based on five soccer action classes, 3) extending the capabilities of 3D-ResNet as a feature extractor for soccer clips, and 4) training an LSTM network with soccer features extracted by 3D-ResNet. This complete model is used for soccer highlight recognition. To summarise long soccer videos, each video is modelled as a sequential collection of concatenated video segments, thus, enabling a segment to be treated as a highlight whose inclusion in a summary video production is based on its validated relevance. For system evaluation, ten complete soccer match videos were downloaded and summarised using the proposed model. 48 participants drawn from 8 countries evaluated the summarised videos. Collectively, the summarised videos received a 4 of 5 rating, where 1 and 5 are the lowest and highest scores respectively. Through this research, it has been identified and proven that longer video clips help neural networks to learn spatiotemporal features better. However, frequent scene changes in long video clips present enormous challenges, such as event overlapping. These challenges are the foundation for future works. With minimal modification, this summarization technique can be applied to soccer-related sports such as handball and netball.",
+    "key_points": [
+        "Deep learning approach to video summarization",
+        "Utilizes 3D-ResNet and LSTM for feature extraction and action recognition",
+        "Challenges of traditional video editing addressed",
+        "Evaluated 10 soccer match videos leading to positive feedback (4/5 score)",
+        "Longer clips enhance network learning but pose challenges of scene changes"
+    ],
+    "used_models": [
+        "3D Convolutional Neural Network (3D-ResNet)",
+        "Long Short-Term Memory Network (LSTM)"
+    ],
+    "topic": "Video Summarization, Deep Learning, Computer Vision",
+    "classification": "Master's Thesis",
+    "publication_year": 2019,
+    "source": "Graduate School of Yeungnam University",
+    "doi": "[UCI]I804:47017-200000174461",
+    "keywords": [
+        "Soccer",
+        "Video Summarization",
+        "Deep Learning",
+        "Convolutional Neural Networks",
+        "LSTM"
+    ],
+    "experimental_results": "The proposed model outperformed benchmark models with a 4 out of 5 Mean Opinion Score (MOS) rating from 48 participants across 8 countries.",
+    "future_research_directions": "Future work will focus on extending this technique to include more soccer actions and improve handling of scene changes in longer clips.",
+    "references": [
+        "FIFA, Fact Sheet, Available: https://www.fifa.com/mm/document/fifafacts/mencompovw/51/99/03/133485-factsheetfifahostcountriesoverview1930-2022.pdf",
+        "Statista, Market size of the European professional football market from 2006/07 to 2015/16 (in billion Euros), Available: https://www.statista.com/statistics/261223/european-soccer-market-total-revenue/",
+        "K. He, X. Zhang, S. Ren and J. Sun, Deep residual learning for image recognition, In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 770-778, 2016."
+    ]
+}

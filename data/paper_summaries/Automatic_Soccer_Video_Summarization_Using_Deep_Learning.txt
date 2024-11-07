@@ -1,0 +1,1553 @@
+저작자표시 2.0 대한민국
+이용자는 아래의 조건을 따르는 경우에 한하여 자유롭게
+l 이 저작물을 복제, 배포, 전송, 전시, 공연 및 방송할 수 있습니다.
+l 이차적 저작물을 작성할 수 있습니다.
+l 이 저작물을 영리 목적으로 이용할 수 있습니다.
+다음과 같은 조건을 따라야 합니다:
+l 귀하는, 이 저작물의 재이용이나 배포의 경우, 이 저작물에 적용된 이용허락조건
+을 명확하게 나타내어야 합니다.
+l 저작권자로부터 별도의 허가를 받으면 이러한 조건들은 적용되지 않습니다.
+저작권법에 따른 이용자의 권리는 위의 내용에 의하여 영향을 받지 않습니다.
+이것은 이용허락규약(Legal Code)을 이해하기 쉽게 요약한 것입니다.
+Disclaimer
+저작자표시. 귀하는 원저작자를 표시하여야 합니다.
+M.S.
+Automatic Soccer Video Summarization
+Using Deep Learning
+Graduate School of Yeungnam University
+Department of Information and Communication Engineering
+Information and Communication Engineering Major
+Agyeman Rockson
+Advisor: Choi Gyu Sang
+2019.02
+[UCI]I804:47017-200000174461
+
+M.S.
+Automatic Soccer Video Summarization
+Using Deep Learning
+Advisor: Choi Gyu Sang
+Presented as M.S. Thesis
+2019.02
+Graduate School of Yeungnam University
+Department of Information and Communication Engineering
+Information and Communication Engineering Major
+Agyeman Rockson
+
+Acknowledgements
+My first heartfelt appreciation goes to my God Almighty for the daily strength and grace to complete
+this work. I am eternally grateful to the Korean Government and People who through the National
+Institute for International Education (NIIED) financed my education leading to the completion of
+this master’s thesis.
+I will also like to express my sincere gratitude to Professor Choi Gyu Sang, my academic supervisor,
+who has given me sound counsel every step of the way. I particularly appreciate your patience and
+words of encouragement. Without these, I could never have completed this work. God bless you,
+Sir. I am equally grateful to my defense committee chair in the persons of Professor Jung Ho-Youl,
+and Professor Sung Man Kyu for their insightful comments and very thought-provoking questions
+that have led to the successful completion of this work. Lastly, I will like to thank Professor Young-
+Tak Kim whose courses have helped me become a competent programmer in Python. Thank you
+very much Sir.
+I will also like to thank Jun Si-Jung and her family, Pastor Kim Dave and his family, Yu Ji-Sook
+and Shin Hwa-Young who have treated me like family and have supported me emotionally during
+my difficult moments as an international student. I sincerely appreciate my dear friends, in no
+particular order, Precious Msevenzo Nyamuranga, Laleesha Chamberlain, Randriarimalala Mickael
+Andrianina, Senyo Obed Amponsah, Ochirkhuyag Tungalagtamir, Nidhi Chakma, Albina
+Kamalova, Aastha Shrestha, Monica Ivanov, Richard Opoku-Sekyere, Shin Hyun Kwang, Hwang
+Ji-Song, Kim Kang Mok, Rafiq Mohammad, Amin Farhan, Kim Seung Jin and Park Kyeong Min.
+I thank you all for cheering me on during my most challenging moments.
+Last but not the least, I am thankful for my family who continue to support me. My sincere thank
+you to all who have helped me up to this point in my life. God richly bless you.
+2019.02
+Agyeman Rockson
+Table of contents
+List of figures……………………………………………………… VI
+List of tables……………………...……………………………….. VII
+Abstract …………...……...……………………………………… VIII
+1 Introduction …………………………………………………....... 1
+1.1 Soccer as a sport ………………………………………………………… 2
+1.2 The importance of soccer highlights and the challenges involved …...… 5
+1.3 Research motivation and objective ……………………………………. 6
+1.4 Thesis document organization ………………………………………..… 6
+2 Deep Learning …………………………………………………. 7
+2.1 Convolutional Neural Network ………………………………………... 8
+2.2 Residual Neural Network ……………………………………………… 13
+2.3 Recurrent Neural Network …………………………………………….. 15
+2.3.1 Vanilla Recurrent Neural Network ……………………………. 16
+2.3.2 Long Short-Term Memory …………………………………….. 16
+2.4 Training Neural Networks …………………………………………….. 18
+3 Related works ………………………………………………….. 20
+4 3D-ResNet and LSTM network-based video summarization….. 25
+4.1 Overview ………………………………………………………………. 25
+4.2 3D-Resnet34 ………………………………………………………….... 26
+4.3 LSTM-2048 ………...………………………………………………….. 27
+4.4 Training ………………………………………………………...……… 27
+4.4.1 Dataset …………………………………………………………. 28
+4.4.1.1 UCF101 action recognition dataset …………………… 28
+4.4.1.2 Soccer-5 dataset ………………………………………. 30
+4.4.1.3 Soccer dataset annotation challenges ………………… 33
+4.4.2 Data preparation …………...…………………………..………. 33
+4.4.3 Converting datasets to HDF5 file ……………………………… 35
+4.4.4 3D-ResNet32 training …………………………………………. 35
+4.4.5 LSTM-2048 training ………………………………………...… 37
+4.5 Video summarization …………..……...…...….....…………………… 38
+5 Performance evaluation ……………………………………….. 40
+5.1 Highlight detector …………………………………………………….. 40
+5.2 Video summarizer …………………………………………………….. 41
+6 Conclusion ………………………………………………….…. 46
+6.1 Future works ……………………….………………………………….. 47
+Bibliography …………………………………………...…………. 48
+Appendices A: Algorithms ……………………………………. 53
+Appendix B: Applications ……..…………………………… 54
+Appendix B: Soccer-5 dataset action classes………..……… 56
+요약 ………………………………………………………………. 57
+VI
+List of figures
+Figure 1 - A typical soccer field with its surface markings………………..…… 3
+Figure 2 - Similarity comparison between a biological and an artificial neuron..7
+Figure 3 - Vanilla Convolutional Neural Network architecture …….……….… 9
+Figure 4 – Variants of the ResNet architecture ………………………………... 14
+Figure 5 - The distinction between vanilla (simple) RNN and LSTM-RNN…... 17
+Figure 6 - The architecture of the proposed video summarization technique….. 25
+Figure 7 - Sample action classes from UCF101 dataset ...…………..………… 29
+Figure 8 - Nigeria versus Bosnia in the 2014 Brazil World Cup match …….…. 32
+Figure 9 - The effect of frame count on 3D-ResNet34’s accuracy ……….....… 36
+Figure 10 - Example of soccer video summarization ……………….……….… 38
+Figure 11 - Mean Opinion Score distribution of summarized soccer videos….……. 43
+Figure 12 - Evaluation score distribution per summarized soccer video .......… 44
+Figure 13 - The geographical distribution of summarized videos evaluators….. 45
+VII
+List of tables
+TABLE I Basic 3D-ResNet34 architecture………………………..……… 26
+TABLE II Hardware employed in system implementation ……………….. 27
+TABLE III Software and frameworks used for system implementation …… 27
+TABLE IV List of annotated soccer actions…...…………………………… 32
+TABLE V Comparison of 3D-ResNet34 with state of the art models using
+UCF101 dataset only…………………………………………… 41
+TABLE VI Comparison of highlight detection model using Soccer-5…..… 41
+TABLE VII Duration comparison of raw and summarized soccer videos .… 42
+TABLE VIII Evaluation response distribution per summarized soccer video.. 43
+VIII
+M.S. Thesis
+Automatic Soccer Video Summarization Using Deep Learning
+Agyeman Rockson
+Department of Information and Communication Engineering
+Graduate School
+Yeungnam University
+Supervised by Professor Choi Gyu Sang
+Abstract
+Soccer has established itself as one of the most enjoyed sport via media broadcast. Due to its
+popularity, broadcasters continue to search for the most convenient technique for generating
+summarised match content. Common among the techniques employed for this purpose is traditional
+video editing, which is time-consuming and requires great skill. This research, therefore, presents a
+deep learning approach to soccer video summarization. It leverages the spatiotemporal feature
+learning ability of three-dimensional (3D) Convolutional Neural Network (CNN) and Long Short-
+Term Memory (LSTM) – Recurrent Neural Network (RNN). The proposed approach involves 1) a
+step-by-step search for a three-dimensional Residual Neural Network (3D-ResNet) architecture that
+learns human actions better than existing benchmark models on UCF101 dataset, 2) manually
+collecting and annotating 744 soccer clips based on five soccer action classes, 3) extending the
+capabilities of 3D-ResNet as a feature extractor for soccer clips, and 4) training an LSTM network
+with soccer features extracted by 3D-ResNet. This complete model is used for soccer highlight
+recognition. To summarise long soccer videos, each video is modelled as a sequential collection of
+concatenated video segments, thus, enabling a segment to be treated as a highlight whose inclusion
+in a summary video production is based on its validated relevance. For system evaluation, ten
+complete soccer match videos were downloaded and summarised using the proposed model. 48
+participants drawn from 8 countries evaluated the summarised videos. Collectively, the summarised
+IX
+videos received a 4 of 5 rating, where 1 and 5 are the lowest and highest scores respectively.
+Through this research, it has been identified and proven that longer video clips help neural networks
+to learn spatiotemporal features better. However, frequent scene changes in long video clips present
+enormous challenges, such as event overlapping. These challenges are the foundation for future
+works. With minimal modification, this summarization technique can be applied to soccer-related
+sports such as handball and netball.
+1
+1 Introduction
+Soccer, also commonly referred to as football, is one of the most enjoyed sports
+worldwide since its formal inception in 1869 [1]. Across the world, soccer is played
+for recreational purposes and also as tournaments. To name but a few, notable
+amongst such tournaments are the Union of European Football Associations
+(UEFA) Champions League, the Spanish Football League and the much respected
+Fédération International de Football Association (FIFA) world cup competition
+which is held every four years [5]. Soccer is such an important sports sector many
+governments use anticipated dividends from it to hasten infrastructural
+development. For example, hosting prestigious soccer events such as the FIFA
+World Cup, gives countries the incentive to speed investments in infrastructure and
+other critical national sectors that otherwise would have been forgotten or stalled
+due to political bureaucracies [7].
+In the recently ended 2018 FIFA world cup, it is estimated that the Russian
+government spent close to USD14.2 billion in the construction of new stadia,
+upgrading public infrastructure and providing essential amenities [53]. As reported
+by the Department of Sports and Recreation of South Africa, the government spent
+close to USD 3.12 billion on telecommunication infrastructure, transportation and
+stadia construction in preparation for the 2010 FIFA World Cup tournament [6].
+The aftermath of this investment saw an influx of tourists, a marginal reduction in
+unemployment, improved infrastructure and a direct contribution of USD 509
+million to the 2010 real GDP of South Africa. In all, an estimated USD 5 billion
+was realized as dividend from hosting the tournament [9]. In Europe, soccer
+dominates as the number one revenue generating sport. According to [8], the
+European soccer market generated an estimated € 24.6 billion for the 2015/2016
+championship season. While ticket sales remain the primary source of revenue for
+most clubs in Europe and many other places, Television broadcast rights also
+2
+contribute immensely to the finances of soccer clubs. Therefore, the significant
+contributions of soccer as a revenue-generating sport cannot be overlooked.
+1.1 Soccer as a sport
+Soccer is built around the concept of teams moving the ball across the field of play
+with the objective of kicking it into the goal of the opposing team [2]. The goal
+framework typically measures eight feet in height and twenty-four feet in width.
+The act of a player placing the ball in the opponent's goal is referred to as goal
+scoring. In peculiar instances where a team places the ball in its own goal instead
+of its opponent's, a goal credit is awarded to the opponent team. This phenomenon
+is known as an own-goal. The player guarding the goal; the goalkeeper, is the only
+player on a team of eleven players who is allowed to touch the ball with both hands
+in addition to other parts of the body. Except during a throw-in event where the
+executing player is allowed to touch the ball with both hands, every other player
+must at all times use other parts of their bodies to advance the ball on the field of
+play.
+Soccer games are officiated by four officials; the central referee, two assistant
+referees, also known as the linesmen, and the fourth official. The two assistant
+referees for the most part of the game advises the central referee on incidents that
+occur on his or her blind side. The fourth official performs roles such as verifying
+substitutions, keeping track of stoppage time and notifying players of added play
+time by flashing the details on a board. As is the custom, a regulation game is
+played in two 45-minute halves. However, when a game is paused multiple times
+to resolve offences and or to treat injuries, at the discretion of the central officiating
+referee, additional play time may be permitted. At the end of stoppage time, the
+team with the more goals wins the match.
+3
+The dimensions of a soccer play field typically measure between 100 yards (90m)
+and 130 yards (120m) in length and between 50 yards (45m) and 100 yards (90m)
+in width [3]. Beyond the boundary of this dimension, that is, the goal and the
+touchlines, all actions are counted as invalid to the game. Nonetheless, any form of
+physical abuse outside the play parameter may lead to the dismissal of the
+offending player. The descriptions of selected parts of a standard soccer field are
+outlined with reference to Figure 1 below.
+Touchline: The touchline is also commonly referred to as the sideline. Together
+with the goal lines, they determine the entire boundary of the playing field. Balls
+that go out of this line will be put back in play by a throw-in.
+Goal line: This is the name given to the line at either end of the field on which a
+goalpost is situated. If a ball should go out of play in this direction, the ball will be
+played back by awarding a corner-kick or a goal kick depending on which team
+sent the ball out of play. Corner-kicks are always effected from the corner arc.
+Figure 1. A typical soccer field with its surface markings. Grass is the commonest surface
+of play. However, in locations where grass maintenance may be difficult due to adverse
+environmental conditions, artificial turf is used as a substitute.
+4
+Halfway line: This line has no particular purpose except it divides the soccer field
+into equal halves. Before kick-off, players are not allowed to cross over this line
+into the half of their contenders. The center mark; the bold marking at the middle
+of the line, is the spot at which a kickoff is taken.
+Penalty area: The penalty area is also sometimes referred to as the penalty box. It
+is made up of the penalty arc, the penalty mark; the spot at which penalty kicks are
+effected, the goal area and a portion of the goal line. In this portion of the field,
+fouls committed by the defending team are generally punishable by awarding a
+penalty to the opposing team.
+Action names in soccer are often derived from the names of the location on the
+field of play where the action is executed. Below is a list of some common soccer
+actions.
+Place kick: This action involves kicking a ball only when it is stationary on the
+ground. Place kick comprises sub-action classes. Free-kick is an example. A free
+kick is awarded after an infringement on a player of the opposing team. A free kick
+can be awarded at any location of the field. However, a free kick awarded in the
+penalty area is known as a penalty. Similarly, a place kick awarded due to a
+defending team sending the ball out of play via its goal line is known as the corner
+kick. This is because it can only be effected from the corner arc closer to the
+direction through which the ball went out of play. The last category of place kick
+is kickoff. It involves kicking the ball from the center spot to start or restart a game.
+Goal: An event is classified as a goal when the ball enters the goalpost of either
+participating teams irrespective of which team player facilitated it. It can come
+about when a player dribbles and kicks the ball from close or long range into the
+goalpost. A goal can also result from any of the above-mentioned place kick
+methods.
+5
+Throw-in: This action involves throwing the ball from the sideline into the playing
+perimeter to restart a game after the ball has gone out of bounds. Throw-in is
+effected using both hands. This is the only time during a match a player who is not
+a goalkeeper, is allowed to touch the ball with hands.
+1.2 The importance of soccer highlights and the challenges involved
+In discussing soccer, one thing is evident. Even though its main scope is to provide
+entertainment to enthusiasts, it has become a sport many lives depend on for a
+livelihood. In this respect, it has become indispensable for club managers to perfect
+winning strategies for their teams through game reviews. The availability of
+recorded matches helps club managers and soccer analysts to evaluate game
+strategies and player capabilities. Analysts must however watch volumes of
+broadcast videos to be able to identify notable events worth analyzing.
+Generally, videos in their short form are the most attractive to viewers. Viewers
+equally like to share such content via messaging applications and media sharing
+platforms such as YouTube. Therefore, soccer videos in their long form is a
+significant disincentive to soccer enthusiasts who want to review old matches.
+Soccer broadcasters continue to seek opportunities to engage a broader audience
+through relevant content creation by traditional video editing means. An example
+of such content is soccer highlights. The challenge with video summarization using
+traditional video editing techniques is that it is a time-consuming task and it
+requires specialized skills. A logical solution, therefore, is the implementation of a
+computer framework that automatically identifies actions of interest in soccer
+videos for onward summarization.
+6
+1.3 Research motivation and objective
+The purpose of video summarization of any kind is to extract the salient
+occurrences in a clip in order to present an easily interpretable content. Not only
+does this reduce the amount of time it takes to review multimedia content, but it
+also helps in quick browsing, retrieval and effective storage management.
+Therefore, the objective of this research is to implement an effective soccer video
+summarization technique that provides video analysts with the flexibility to choose
+from a list of soccer actions that should be included in a summary video.
+1.4 Thesis document organization
+The remainder of this research document is organized as follows. Chapter 2
+describes the general concepts of deep learning as a better alternative to traditional
+handcrafted classification systems. The most commonly used architectures;
+Convolutional Neural Network (CNN) and Long-Short Term Memory Recurrent
+Neural Network (LSTM-RNN) are explained in detail in this chapter. Chapter 3
+describes some video summarization and action recognition works from which
+inspirations were derived to execute this work. The proposed novel video
+summarization scheme is explained in detail in chapter 4. Chapter 4 also outlines
+the importance of dataset as the key driver of deep learning related researches.
+Finally, this chapter describes in detail the two main datasets employed in the
+execution of this research work. Chapter 5 evaluates the performance of the
+highlight recognition and summarization techniques outlined in chapter 4. This
+document is concluded in chapter 6.
+7
+2 Deep learning
+The use of computing models to learn information representation from raw data
+and onwardly making inference on new data has been on the rise in the past few
+years. This field, known as Machine Learning (ML), has seen the creation of
+sophisticated predicting models through algorithm development in many
+disciplines. An example of such a ML model is the Artificial Neural Network
+(ANN). ANN is formulated on the foundations of how the human brain is
+structured and works. In other words, it may be thought of as simplified models of
+networks of neurons that occur naturally in the animal brain.
+In this regard, three premises influence the modeling of ANN. They are, 1) a neuron
+is the fundamental unit of the human nervous system, 2) inputs stimulate neurons
+and 3) neurons connect to each other to form a complex network The inputs, also
+known in some literature as percepts, are passed on to connecting neurons based
+on some activation threshold transformations [4]. Therefore, an ANN can simply
+be defined as an assembly of interconnected neurons or nodes, whose percept
+processing ability is stored in the inter-neuron connection strengths known as
+weights. Figure 2 shows the relationship between the structures of a biological
+neuron and an artificial neuron.
+(a) (b)
+Figure 2. Similarity comparison between a biological and an artificial neuron. (a)
+Structure of a biological (human) neuron. Multiple neurons interconnect to form the
+nervous system. (b) The symbolic representation of an artificial neuron.
+8
+Deep learning (DL) is a specialized domain of ML. It involves the use of ANNs to
+form deeper networks known as Deep Neural Networks (DNN) to teach computers
+how to perceive as humans do. In DNNs, neurons have more complex ways of
+interconnecting in adjoining layers. The objective of DL is to learn multiple levels
+of feature representation to make inference from image, speech and text data.
+Different DNN architectures have been explored extensively in many pieces of
+research to solve interdisciplinary problems. DNN architectures can be classified
+under four broad categories, namely, 1) Unsupervised Pretrained Network, 2)
+Convolutional Neural Networks (CNN), 3) Recurrent Neural Network (RNN) and
+4) Recessive Neural network [10]. For this research, only two architectures, CNN
+and RNN, and their derivatives shall be discussed in detail. Details of the
+complement architectures are discussed in [10].
+2.1 Convolutional Neural Network
+Irrespective of the model variance, all Convolutional Neural Network architectures
+follow a general architecture. CNNs typically comprise convolutional layers,
+activation functions, normalization layers, pooling layers and fully connected (FC)
+layers. In CNNs, every layer acts as a detection filter for specific patterns in an
+input data. For example, the convolutional layers perform convolution operations
+on inputs and pass on the results to the next hierarchical layer. In particular,
+computer vision researchers have used CNNs extensively in image analysis
+problems. CNNs are also widely employed to make video distinctions, distinguish
+human faces, forecast revenues and predict medical conditions, to name but a few.
+Many variants of CNNs have been employed to solving some of the above-named
+problems. Notable among such architectures are LeNet [11], AlexNet [12],
+VGGNet [13], GoogleNet [14], ResNet [15] and C3D [46], to name but a few. The
+building blocks of a vanilla CNN are discussed below in reference to Figure 3.
+9
+Convolution Layer: The convolution layer is the core building block of CNNs. As
+its name implies, the convolution layer is responsible for convolution operations.
+A convolution operation is an integral function that expresses the amount of
+overlap of one function g as it is shifted over another function f. In other words, it
+is a product of a windowed function, g, slide over an input function, f [16]. The
+product function (feature map) over a finite range [0, t], is represented
+mathematically as:
+[f ∗ g](t) ≡ ∫ f(τ)g(t − τ)dτ
+t
+0
+(1)
+The context of convolution in the convolution layer shall be restricted to visual data
+(videos and images) from this point on. The extension of CNN to audio data is
+documented in detail in [17]. Visual data, specifically, images have three
+dimensions; height, width and depth. The depth represents the color channels. A
+Pixels is the fundamental building block of an image. Pixels are conventionally
+represented as greyscale and color. In greyscale, each pixel value ranges between
+0 and 255 where 0 and 255 represent black and white intensities respectively. On
+the other hand, color pixels are conventionally represented in three color channels,
+that is, Red, Green and Blue (RGB) channels. Each RGB intensity ranges between
+Figure 3. Vanilla Convolutional Neural Network architecture. The input image is a
+kangaroo. The receptive field; clusters of neurons, detect low-level characteristics of the
+kangaroo and communicates the characteristics to the higher hierarchy neurons to
+develop a high-level representation.
+10
+0 and 255. Therefore in describing image channel depths, 1 represents greyscale
+and 3 represents the individual RGB channels.
+An input to be convolved is commonly referred to as an input volume. As
+aforementioned, convolution involves the sliding of a window function across an
+input. In the convolution layer, the parameter used for this operation is the filter.
+Also known as the kernel, a filter is an array of numbers known as weights. Every
+filter is smaller along the spatial dimensions; in width and height, compared to the
+spatial dimensions of the input volume. Filters, however, extend through the entire
+depth of the input volume. Therefore, as a good rule of thumb, the filter depth must
+always be equal to the channel depth of the input volume [10]. The output of a
+filter; activation or feature map, is computed by the dot product of the filter weights
+and the input region of the input volume known as the receptive field. The sliding
+of the filter per unit across the input volume for convolution is called stride.
+In CNN, there is the option to either decrease the spatial dimensions of feature
+maps from one network layer to another or to maintain the size. The need to
+maintain these spatial dimensions or not to maintain depends on the expected
+outcome of the network architecture. By default, filter size and stride operations
+reduce the spatial size of feature maps. Using padding on input volumes and
+features maps alike ensures the dimensions are preserved. The commonest form of
+padding is Zero Padding. Zero padding involves padding image borders with zeros.
+Without padding, the information at the image borders will be lost due the
+reduction in the size of feature maps after each convolution. This ultimately
+adversely affects the network performance. The spatial dimension of a feature map
+can be expressed mathematically as:
+Woutput =
+Winput− Fw+2P
+SW
++ 1 (2)
+11
+Houtput =
+Hinput− FH +2P
+SH
++ 1 (3)
+where W is the spatial width, H is the spatial height, F is the filter size across the
+spatial dimensions, P is padding and S is the unit stride in a defined spatial
+dimension.
+Activation Function: Figure 2 and equation 1 shall be used as the reference. When
+a neuron has computed a weighted sum of its inputs, plus or minus a bias, there is
+the need to decide whether to pass the output or to withhold it. This is similar to
+the mechanism of the biological neuron in [4] where it decides whether a signal is
+worth passing onto adjoining neurons or not. The process of forwarding activated
+signals to adjoining neurons is known as forward-propagation. In NN, the entity
+responsible for this decision making is known as the activation function. Sigmoid,
+tanh, Softmax, Rectified Linear Unit (ReLU) and Leaky ReLU are some examples
+of the commonly used activation functions. According to [10], [15] and [17], ReLU
+is most suited for convolution layers while Softmax is best suited for multi-class
+classification in the classification layer.
+In ReLU, for a given input x, the output is x if x is positive and 0 if otherwise. This
+is represented mathematically in equation (4). Softmax activation function, on the
+other hand, is a generalization of the logistic function to multiple classes, thus its
+adaptation to multi-class classification problems. For example, UCF101 dataset
+contains 101 action classes [25]. Therefore, the classification output of a CNN
+using this dataset will be expressed as a vector of the probability distribution over
+the set of 101 mutually exclusive labels. This is represented mathematically in
+equation 5 where Pi is the probability prediction of the action class.
+12
+𝑓(𝑥) = {
+𝑥 𝑖𝑓 𝑎 > 0,
+0 𝑖𝑓 𝑥 ≤ 0.
+(4)
+[𝑃0 𝑃1 𝑃2 𝑃3 ⋯ 𝑃100 ] = Σ 𝑃𝑖 100 = 1
+𝑖=0 (5)
+Normalization Layer: Any layer in a neural network can be thought of as the first
+layer of a smaller subsequent network. Layer input volumes have the potential to
+explode in dimension due to the various activations they undergo as they travel the
+entire network. One of the practical methods used to ensure that this explosion does
+not occur unnecessarily is normalization. Normalization simply explained, is the
+process of shifting network inputs to a zero mean and unit variance. Normalization
+ensures that there is no significant difference between input volumes that can
+potentially degrade the performance of a NN. The two popular normalization
+techniques used in CNNs are Local Response Normalization (LRN) and Batch
+Normalization (BatchNorm). In LRN, the objective is to encourage some form of
+activation inhibition and boost the neurons with relatively larger activations. LRN
+is discussed extensively by Alex, Ilya and Geoffrey in [12]. In BatchNorm
+however, instead of normalizing the inputs to the entire network, normalization is
+performed on the batch activation inputs to layers within the network. BatchNorm
+is also discussed extensively by Sergey and Christian in [18].
+Pooling Layer: Training parameters in CNN quickly grow into the millions. The
+disadvantage of large parameters is their inability to fit into memory (CPU or GPU)
+for training. To reduce the dimensionality of feature maps, pooling layers are
+inserted in-between successive convolution layers. The commonest pooling
+technique used in many DL architectures such as [11], [12], [13], [14] and [15] is
+max pooling. Similar to convolution kernels, a pooling filter works on the principle
+of the receptive field. It is moved across the spatial dimensions of a feature map
+13
+per unit stride. As the name suggests, in max pooling, the maximum value of a
+receptive field convolutional operation is returned as the downsampled feature
+map. Another pooling technique commonly used is average pooling. Average
+pooling returns the average value of the convolution operation as feature map. It is
+however not common to use zero-padding in pooling layers. The governing
+parameters of a typical pooling layer are the filter size and the stride.
+Fully Connected Layer: The fully connected layer is optional in some CNN
+architectures, such as is found in [15]. While it is possible to flatten the feature
+maps as a vector input to the output layer, the advantage of introducing a FC layer
+is that it presents an inexpensive way of learning non-linear feature combinations.
+2.2 Residual Neural Network
+Some conventional approaches employed to improve the accuracy of CNNs are
+making the network deeper by adding more layers, widening the width of layers
+and increasing the kernel size, to name but a few. Some of the above-named
+strategies are demonstrated in [13], [14] and [15]. However, increasing network
+size invariably increases the number of training parameters. Due to the nonlinearity
+of the building blocks that make up neural network algorithms, the
+management of such training parameters can quickly become a daunting task even
+for the most advanced algorithm. Therefore, the deeper a neural network, the more
+its memory requirement. The logical solution to memory related problems is cluster
+computing [21]. However, besides memory limitations, the optimization problem
+for DNNs comprise multiple local minima that need to converge optimally [19].
+Therefore, promising as deeper neural networks may be, they are challenging to
+train due to the vanishing and exploding gradient problems associated with having
+very large training parameter [20].
+14
+To overcome the challenges associated with training vanilla deep networks,
+Kaiming, Xiangyu, Shaoqing and Jian implemented a learning framework known
+as the deep Residual Network (ResNet) [15]. The architecture of a ResNet is
+usually represented as 𝑅𝑒𝑠𝑁𝑒𝑡 − 𝑥 , where 𝑥 denotes the depth of the network.
+ResNet makes it possible to achieve outstanding results on networks that are up to
+hundreds of layers deep. The basic ResNet architecture is explained in detail using
+Figure 4 (a) as the reference.
+As aforementioned, neural networks achieve higher generalization through layer
+hierarchy, that is, layers learn salient characteristics from the output of preceding
+layers. This means that a previous layer's inability to learn the expected salient
+features will inevitably cause improperly learn feature maps to be propagated
+throughout the entire network. This is synonymous to using blurred images as input
+to an image classification network, for example. The classification neural network
+will have difficulty in accurate generalization because of the low quality of features
+represented in the input image. Therefore, in ResNet, to ensure a minimum loss of
+Figure 4. Variants of the ResNet architecture. (a) The fundamental building block of
+ResNet known as the residual block. Figures 4 (b), 4 (c), 4 (d) and 4 (e) are variants of 4
+(a).
+15
+information from any of the preceding layers, a shortcut, is added as input in
+addition to the abstractions learned from the previous layer. Also sometimes
+referred to as the residual block or residual unit, the shortcut is expressed as:
+𝑦1 = ℎ(𝑥𝑙 ) + 𝐹(𝑥𝑙 , 𝑊𝑙 ) (6)
+𝑥𝑙+1 = 𝑓(𝑦𝑙 ) (7)
+where 𝑥𝑙 and 𝑥𝑙+1 are input and output of the 𝑙𝑡ℎ unit, 𝐹 is the residual function,
+ℎ(𝑥𝑙 ) is the identity mapping, and 𝑓 is the ReLU activation function. This identity
+addition operation preserves information across layers and compensates for
+inefficiencies of the intermediary layers.
+In every layer, batch normalization is used right after each convolution, followed
+by a ReLU activation function. Using ResNet, Kaiming et al won first place in the
+ILSVRC 2015 classification competition by achieving a top-5 error rate of 3.57%.
+Kaiming et al also won the 1st place in the ILSVRC and COCO 2015 competition
+in ImageNet detection, Coco segmentation, Coco detection and ImageNet
+localization using the ResNet architecture depicted in Figure 4 (a). Leveraging on
+this success, Kaiming et al refined the residual block and proposed pre-activation
+variants in [22] as shown in Figures 4 (b) to 3(e). With these modifications,
+gradients are not restricted to any one particular previous layer but can flow through
+the identity connections to any other preceding layer. These gains have birth other
+improved ResNet based architectures such as ResNeXt [50] and Densely
+Connected CNN [51], to name but a few.
+2.3. Recurrent Neural Network
+In a standard feed-forward neural network, the following sequence of operations
+takes place: features are fed to the input layer, the input layer passes on the features
+16
+to multiple hidden layers, and the last hidden layer passes on the abstraction
+features to the output layer for decision making (classification). This phenomenon
+is demonstrated in CNN, for example.
+2.3.1 Vanilla Recurrent Neural Network
+In contrast to feedforward neural networks, vanilla Recurrent Neural Networks
+(RNN) model information over time-steps. In this regard, the output of a node is
+dependent on the output of its previous computations [10]. For example, in a given
+time step 𝑡 and for a given input 𝑥𝑡, the recurrent function 𝑓(𝑥𝑡) will produce an
+output ℎ𝑡. In the next time step, however, the input to the node shall be 𝑥𝑡 and ℎ𝑡−1,
+thus, producing a new output ℎ(𝑥𝑡, ℎ𝑡−1). In practice, for traditional RNNs, access
+to arbitrary information is limited. Arbitrary information can be accessed from only
+a few previous time-steps. This limitation can be overlooked if the output does not
+strictly depend on a context that spans several time steps. An example would be an
+RNN that predicts the next word of a phrase. In many real-life applications,
+however, such as natural language processing and sentimental analysis, to achieve
+higher performance, it is crucial that the context of arbitrary information span many
+previous time steps. Vanilla (simple) RNN is shown in Figure 5 (a).
+2.3.2 Long Short-Term Memory
+Similar to non-specialized feedforward networks, RNNs also suffer from vanishing
+and exploding gradient problems [34], especially, when tasked to deal with longterm
+dependencies. To resolve the vanishing and exploding gradient problems and
+retain arbitrary information from several previous time steps, Hochreiter and
+Schmidhuber [23] proposed a variance of RNN called the Long Short-Term
+Memory (LSTM). This involved the introduction of a memory into the vanilla RNN
+architecture. Therefore, a LSTM layer typically comprises a set of recurrently
+17
+connected memory blocks. Individual memory blocks contain one or more
+recurrently connected memory cells, together with three multiplicative units; the
+input, output and forget gates [24]. The input gate protects the unit from irrelevant
+input events while the output gate exposes the arbitrary information of the memory
+cell. The role of the forget gate is to discard selective information from previous
+memory cells. All the above-named gates use the sigmoid activation function to
+restrict outputs to [0, 1]. Other LSTM variants have, in addition to the abovenamed
+gates, peephole connections, such as documented in [52]. Since LSTMs are
+effective at overcoming vanishing gradient problems and are good at capturing
+long-term temporal dependencies, they have been used in many real-life tasks such
+as language modeling and translation, handwriting recognition, video analysis and
+speech synthesis, to name but a few. The differences between vanilla RNN and
+LSTM are summarized in Figure 5.
+(a) (b) (c)
+Figure 5. The distinction between vanilla (simple) RNN and LSTM-RNN. (a) Simple
+Recurrent Network. (b) LSTM block unit. (c) Legend description of (a) and (b).
+18
+2.4 Training Neural Networks
+Neural networks learn information by using multiple example data referred to as
+datasets. Traditionally, datasets are divided into three; training, evaluation and test
+dataset. Training dataset is the actual data a neural network learns from to be able
+to make an inference. The validation dataset is the sample of data that is used by a
+neural network to evaluate itself during training. The test dataset is used for
+evaluating the overall generalizing ability of a neural network. For many deep
+learning algorithm implementations, researchers face computer memory and
+computation limitations. Therefore, input data are fed to algorithms in batches. The
+size of each batch of input volume is known as batch size.
+Input data are fed in batches to a deep learning algorithm till all the datasets have
+been used for training. This is known as one epoch. Typically, one epoch comprises
+at least one iteration. Mathematically, iteration is expressed as the total number of
+data in a dataset (1 epoch) divided by the batch size.
+A key feature of ANN is that it involves an iterative learning process in which
+training data are presented to the network one at a time or in batches and the
+associated weights with the input values are adjusted at each iteration. After all
+training datasets are presented, the process is repeated for a number of times.
+Through this process, the network learns by adjusting the weights and other
+parameters to enable it predict the correct class label of input samples. Therefore,
+as a rule of thumb, neural networks learn by comparing predictions to actual values.
+Loss or cost functions are used to estimate how “wrong” a NN is at making
+predictions. The closer the loss function is to zero, the more accurate a neural
+network is at generalizing. The most commonly used loss functions are Mean
+Squared Error and Cross-Entropy [10]. Neural networks attempt to minimize cost
+by finding the gradient of the cost function and using this gradient to alter the
+19
+weights and biases of connected neurons in a back-track manner; from the output
+layer to the input layer. This process is known as back-propagation.
+Traditional backpropagation does not apply to RNNs. In RNNs because parameters
+are shared by all time steps of the network, the gradient of the loss function is
+propagated through every previous time step. This is known as Backpropagation
+Through Time (BPTT) [10]. The commonest algorithm used in the estimation of
+the cost function gradient is Stochastic Gradient Descent [35].
+20
+3 Related works
+Traditionally, video summarization techniques focus primarily on making long
+videos shorter with little regard for the flexibility in selecting desired scenes that
+should be included in a summary video. For example, in the surveillance video
+summarization framework proposed by Zhong, Yuting and Rongrong [54],
+trajectories were extracted from detected moving objects to be able to obtain
+keyframes. The obtained keyframes together with the trajectories were then used
+to identify the video segments that should be concatenated to form a summary
+video. General video summarization techniques based solely on keyframe selection
+have also been extensively explored such as [55]. This approach involves the
+similarity detection between consecutive video frames by calculating the Euclidean
+distance between them. If this estimation is lower than a threshold, the frames are
+considered as part of the same segment; thus, the first and last frame of the said
+segment are selected as key frames to be concatenated into a summarized video.
+A video of any domain typically comprises two broad categorization of events;
+usual (normal) and unusual (abnormal) events. For the entire duration of a video,
+usual events occur more frequently than unusual events. For example, in a soccer
+match, the general expectation is that participating teams will keep the ball from
+entering their goal post. In this regard, an unusual (exciting) moment is when the
+ball enters the goal post of either participating team. Therefore, in discussing video
+summarization, it is safe to assert that, summarization is founded on the principle
+of unusual moment recognition and how this phenomenon travels through the
+entire length of a video. This premise is the foundation for the scope of this work.
+Action recognition and classification techniques can be broadly categorized as 1),
+techniques that involve traditionally handcrafted feature extractors and 2),
+techniques that involve the use of deep learning networks. In handcrafted action
+representation techniques, the salient features from a sequence of image frames are
+21
+extracted to form feature descriptors. Classification is then performed on the
+feature descriptors by training a generic classifier such as Support Vector Machine
+(SVM) [30]. Some examples of handcrafted techniques are [31], [32], and [33].
+Even though some handcrafted techniques have yielded outstanding results, many
+are computationally expensive and have shallow discriminative power. Deep
+learning techniques on the other hand use supervised or unsupervised approaches
+to automatically learn the feature representations that exist in image or video data.
+Vanilla CNNs are two-dimensional. This characteristic makes them much suited
+for image classification related problems. Unlike image data, video data comprise
+both spatial and temporal information that must be learned simultaneously. Video
+data are therefore difficult to generalize using vanilla 2D CNN. One of the recent
+works that have employed multiple streams of 2D CNNs to learn spatiotemporal
+features is [56]. Karen and Andrew used two streams of a 5-layer CNN in their
+algorithm implementation. The same video input was fed simultaneously to each
+stream, frame by frame. The spatial network was used to learn spatial features from
+video frames whiles the temporal network was used to learn the temporal
+relationship between video frames. The individual spatial and temporal network
+class scores were fused to score the overall prediction accuracy of the entire model.
+Similarly, Joe et al [28] have proposed the use of two streams of CNN; AlexNet
+[12] and GoogleNet [14], to process clips that contain up to 120 frames. This work
+reveals that using raw frames together with optical flow and performing maxpooling
+over the final convolution layer yields outstanding action discrimination
+capabilities. Also similar to [56], Limin et al in [57] have proposed an action
+recognition model known as the Temporal Segment Network (TSN). In this
+technique, instead of using still frames as input to the streams of CNNs, an input
+video is divided into many segments, from which a short snippet is randomly
+22
+selected as input. The class score of a clip is calculated by fusing predictions from
+all stream networks.
+Using a technique similar to [57] and leveraging the achievement of [15] in image
+classification, Christoph, Axel and Richard [58] have proposed a residual
+spatiotemporal network for action recognition. The proposed model introduces
+residual connections between the motion and appearance pathways of a two-stream
+architecture and transforms pre-trained image CNNs into spatiotemporal networks.
+3D CNNs have also proven successful at action discrimination from video datasets.
+One of the most recent successful architectures is C3D [46]. Influenced by [13],
+C3D is a 3D CNN of 8 convolution layers and can learn spatiotemporal features
+from video clips. Du et al [59] have attempted a 3D remodeling of [15] but have
+only been able to increase the performance against [46] marginally on the UCF101
+dataset.
+In the soccer domain, one of the early works on soccer highlight detection is [36].
+Jürgen, Marco, Carlo, Bimbo and Walter proposed the use of a temporal logic
+model-based approach to recognize soccer highlights based on four main action
+classes; i) forward launching attack on the opponent, ii) goal shots, iii) turnovers
+and iv) placed kicks. In the implementation, Jürgen et al divided the soccer
+playfield into twelve regions; six each for each participating team. The objective
+was to use each division as an independent representation, thus, a movement from
+one region into another depicts a change in action scene. Playfield lines and shapes
+such as the center line and corner arc were used to recognize the playfield zones.
+Five element vectors, comprising of playfield shape descriptor, playfield line
+descriptor, playfield corner position, playfield size descriptor and midfield line
+descriptor were calculated from the distinct demarcated features of each data set.
+A Naive Bayes classifier was then used to classify each field zone based on the
+element vectors.
+23
+In sports video production, a replay constitutes an event of great interest. In the
+work executed by Zhao, Shuqiang, Qingming and Guangyu [45], Zhao et al
+proposed a highlight summarization system based on replay events. Zhao et al. first
+cropped replay clips from soccer videos. The features of interest from the extracted
+replay clips were audio energy and motion activity. These features were used to
+rank the arousal level of clips. The arousal rank thus became the criterion on which
+summarization videos were modelled. To evaluate the summarization model, four
+observers were selected to independently annotate the arousal level of two
+categories of sports videos; hockey and soccer videos. A total of 19 soccer videos
+and 25 hockey videos were used for this exercise. This technique however only
+works for professionally produced sports videos that contain replays.
+In the work closely related to [36], Moez, Franck, Christian, Christophe and Atilla
+[37] employed a deep learning approach to recognize soccer related actions from
+videos. Similar to [36], only four action classes; placed-kick, shot on goal, goalkick
+and throw-in were considered. In the implementation, Moez et al used two
+feature extraction mechanisms to extract a sequence of descriptors from video
+frames. These features extracting mechanism were Bag of Words (BOW) [38] and
+Scale Invariant Feature Transform (SIFT) [39]. The video frames were extracted
+from the MICC-Soccer-Action-4 video dataset. This dataset is made up of onehundred
+25 FPS sampled soccer video clips. Unfortunately, this data is not
+available to the public for the reproduction of this work. The feature descriptors
+were then trained on an LSTM-RNN to categorize each of the action classes based
+on the evolution of the descriptors. In the concluding remarks, Moez et al expressed
+the hope that, as future work, they would investigate the use of CNN as a feature
+extractor to feed the LSTM-RNN classifier. This idea is the foundation of this
+research.
+24
+Although not directly related to soccer but still in the domain of sports video
+summarization, Antonio et al [43] have proposed a reasoning similar to [37] to
+summarize sports videos captured using everyday video capturing devices, such a
+camera phones, action cameras and camcorders. This category of videos is
+commonly referred to as User Generated Sports Video (UGSV). In the
+implementation of the proposed architecture, Antonio et al used two streams of
+feature extractors; the Body joint-based feature extraction stream and the Holistic
+feature extraction stream, to learn features from Kendo videos [44]. These feature
+streams were then concatenated and trained on an LSTM-RNN classifier. The body
+joint-based feature extraction stream consists of an LSTM network that is used to
+capture kendo players' motion by estimating their body joints positions. The
+holistic feature extraction stream mechanism, on the other hand, leveraged the
+weights and hyperparameters of C3D pre-trained on the Sports-1M dataset.
+From the list of the existing video summarization and action recognition works
+highlighted in this chapter, three conclusions can be drawn:
+I. Deep learning based soccer video summarization related researches are
+adversely affected by the non-availability of annotated soccer videos.
+II. Existing soccer video summarization algorithms focus mainly on making
+videos shorter by using computationally expensive handcrafted algorithms.
+III. Many human action recognition algorithms depend on the use of
+computationally expensive multiple streams of vanilla CNNs.
+Chapter 4, therefore, proposes the implementation of scalable deep learning
+algorithms to resolve the above-mentioned observations regarding conventional
+human action recognition and video summarization.
+25
+4 3D-ResNet and LSTM network-based video summarization
+In this chapter, the proposed video summarization technique is described in detail.
+Some existing works from which ideas were borrowed are also referenced. The
+highlight recognition architecture comprises two main models; a ResNet based 3D
+CNN for feature extraction and a LSTM for action classification. The overall
+summarization architecture is summarized in Figure 6.
+4.1 Overview
+The proposed solution is summarized in seven steps. 1) Create a soccer dataset by
+manually annotating soccer clips. 2) Develop a ResNet based 3D CNN model that
+distinguishes human actions better than existing algorithms. 3) Extend this
+generalization to soccer clips. 4) Use the ResNet based 3D CNN model to extract
+features from the soccer dataset. 5) Train an LSTM network on the extracted soccer
+features. This network is the soccer highlight recognition network. 6) To
+summarize a soccer video, model the input as a group of sequentially concatenated
+video segments. Evaluate each segment using the highlight recognition network
+from step 6. 7) Concatenated all exciting video segments into a summary video.
+(a) (b) (c) (d) (e)
+Figure 6. The architecture of the proposed video summarization technique. (a) The video
+segment generator keeps a record of the length of the last highest ranked highlight to
+estimate the next segmentation starting point of Vt . If the length of the last video segment
+to be generated is less than 3 seconds, only one segment is generated. (b) Feature maps
+are extracted from the last pooling layer only and saved a numpy array. (c) At least 3
+highlights are generated to be ranked by (d).
+Figure 7.
+26
+The proposed highlight detection scheme is closest to [37]. However, instead of
+BOW and SIFT as feature descriptors, a ResNet-based 3D CNN is proposed.
+ResNet34 from [15] is adopted for this work. The ResNet34-based 3D CNN shall
+be referred to as 3D-ResNet34 from now on.
+4.2 3D-ResNet34
+The proposed 3D-ResNet34 architecture is described in detail in Table I. Each 3D
+tensor shall be represented as 𝑙 𝑥 ℎ 𝑥 𝑤 𝑥 𝑐 where 𝑙, ℎ, 𝑤, 𝑎𝑛𝑑 𝑐 are the length
+(number or size of the input), the height, width and the channel depth of a tensor
+respectively. According to [10], convolution filters with larger values tend to be
+disproportionally expensive. Across many deep learning related pieces of research,
+the de facto filter size in 2D CNNs is 3𝑥3. First introduced by Min, Qiang and
+Shuicheng [60], 1𝑥1 convolution gives the advantage of shrinking volumes and
+saving big on computation. One of the most recognized works that have employed
+1𝑥1 convolution is the Google Inception Module by Christian et al [14]. With the
+success of 1𝑥1 convolution, the 7𝑥7 filter in layer 1 of ResNet34 was replaced with
+a 1𝑥1 filter. Therefore, the kernel size of the first layer, 𝑐𝑜𝑛𝑣 1, was 1𝑥1𝑥3 and a
+stride of 1x1x1. 3 is the number of color channels; Red-Green-Blue (RGB).
+TABLE I. BASIC 3D-ResNet34 ARCHITECTURE
+Layer name 3D-Resnet34 layer parameters
+Conv 1 1𝑥1𝑥3, 64, 𝑠𝑡𝑟𝑖𝑑𝑒 = 1𝑥1𝑥1
+conv 2_x [
+3𝑥3𝑥3, 64
+3𝑥3𝑥3,64
+] 𝑥3
+conv _x [
+3𝑥3𝑥3, 128
+3𝑥3𝑥3,128
+] 𝑥4
+conv 4_x [
+3𝑥3𝑥3, 256
+3𝑥3𝑥3,256
+] 𝑥6
+conv 5_x [
+3𝑥3𝑥3, 512
+3𝑥3𝑥3,512
+] 𝑥3
+Average pooling, number of classes (FC), softmax
+27
+4.3 LSTM-2048
+The LSTM network architecture is very basic and comprises a single 2048-wide
+layer that is used together with two 512 dense layers. The last layer is a 5 class
+dense layer with softmax activation. All but the last layer use a dropout of 0.5. For
+simplicity, this network shall be referred to as LSTM-2048 from this point on.
+4.4 Training
+This subsection describes 1) how the datasets were prepared for training, 2) the
+hyperparameter tuning processes during training and 3) how sampled soccer videos
+were summarized. Python was used in the execution of this research. Table II below
+lists the specifications of the hardware platform, and Table III lists the major
+software frameworks used to implement this project.
+TABLE II. HARDWARE EMPLOYED IN SYSTEM IMPLEMENTATION
+Processor
+Intel Core i7-6700K CPU
+CPU speed: 4.00GHz
+Number of CPU cores: 8
+Memory 32 Gigabytes
+GPU
+NVidia Titan X
+Memory: 12 Gigabytes
+TABLE III. SOFTWARE AND FRAMEWORKS USED FOR
+SYSTEM IMPLEMENTATION
+Library Library Version
+Tensorflow [61] 1.5.0
+Keras [62] 2.1.5
+Numpy [63] 1.14.1
+OpenCV [48] 3.4.0
+Celery [27] 4.2.1
+Flask [65] 1.0.2
+Operating system Linux (Ubuntu 16.04 Desktop version)
+28
+4.4.1 Dataset
+Datasets are used for training neural networks to make inference on real-world data.
+Deep learning algorithms comprise many hyperparameters, and they require large
+volumes of training data to be able to tune the hyperparameters to fit any domain
+problem properly. One of the factors that have accelerated the development and
+deployment of deep learning algorithms is the availability of domain datasets.
+Many researchers in the DNN community continue to share their datasets and
+algorithms for the advancement of deep learning related researches. For the scope
+of this work, this subsection shall highlight the characteristics of the publicly
+available UCF101 action recognition dataset. This section shall also describe the
+methods employed in the creation of the Soccer-5 dataset. Soccer-5 is a five soccer
+action class dataset which was self-annotated purposely for this research. This
+section shall be concluded by outlining the core challenges associated with creating
+soccer video datasets.
+4.4.1.1 UCF101 action recognition dataset
+UCF101 [25] is one of the popularly used datasets in deep learning and computer
+vision related researches. It is annotated from publicly available YouTube videos.
+UCF101, as its name implies, comprises 101 action classes. It contains 13,320
+sample clips that span over 27 hours of video data. UCF101’s 101 action classes
+are broadly divided into five categories, namely, Human-Object Interaction, Body-
+Motion Only, Sports, Playing Musical Instruments and Human-Human Interaction.
+Some examples of action classes include biking, horse riding, playing piano, rock
+climbing and skateboarding, to name but a few. Figure 7 shows some selected
+UCF101 action classes. Similar to the use of Sports 1M dataset [47], UCF101 is
+also widely used to evaluate DNN algorithms. There are however a few concerns
+related to the structure of this dataset.
+29
+The UCF101 dataset contains very short video clips and so it is not suitable for
+algorithms that require longer videos [28]. A careful statistical analysis of this
+dataset reveals that as much as 27.95% of the videos have less than 120 frames.
+Therefore, to be used in algorithms that require longer clips, a feasible workaround
+this limitation is to repeat frames until the desired length of the video is attained.
+All but four videos are 320 and 240 pixels in width and height respectively. The
+four videos belong to the pommel horse class. They are sized 400 and 226 pixels
+in width and height respectively. The standard sampling rate for many of the videos
+is 25 frames per second (FPS). However, 2,510 videos, representing 18.84%, are
+sampled at 29.97 FPS. Another realization is that UCF101 consist of unbounded
+actions. For example, diving is universally defined as an activity that requires an
+Figure 7. Sample action classes from the UCF101 dataset. UCF101 is used in both action
+recognition and action detection related researches.
+30
+entity to jump from a stationary platform into a water source, such as a pool.
+However, as can be observed from clips in the diving class of UCF101, all actions
+are preceded by activities that can easily be mistaken as jumping even from a
+human perspective. For example, in v_Diving_g01_c01.avi, a man is seen jumping
+several times on the springboard before eventually performing the diving act. In
+the absence of a clear view of the pool, even a human can easily mistake this action
+for jumping by viewing only the first half of the video. The absence of action
+bounding, therefore, makes it difficult to settle on a universal sampling rate for
+frame extraction in UCF101.
+4.4.1.2 Soccer-5 dataset
+Compared to the availability of other domain video datasets, such as UCF101,
+Sports-1M and HMDB-51 [26], there are presently no publicly available soccer
+datasets in raw video formats. Soccer video datasets used in [36], [37], [43], and
+[45] remain proprietary.
+For this work, 612 soccer videos were downloaded from sports media websites for
+manual clip extraction and annotation. Taking into account the minor difficulties
+associated with UCF101, some criteria were strictly adhered to in creating the
+soccer dataset. This dataset comprises of five action classes and shall be referred
+to as Soccer-5 from now on. For uniformity, all logos, score-lines, advertisements
+and other soccer non-related scenes were cropped out of each downloaded video.
+The dimension of all annotated clips was 640x480 pixels. The naming conversion
+adopted for each video clip is outlined below. Figure 8 shall be used as the
+reference.
+I. The dominant colors of competing teams’ outfit (shirt, short and hose) were
+ranked in ascending alphabetical order of magnitude and concatenated as a
+single string. The two color names were however separated by a hyphen.
+31
+For example, from Figure 8, the dominant colors are green and white for
+the Nigerian and Bosnian national teams respectively. Therefore, the
+preliminary name for the video clip is green-white.
+II. The names of competing teams were also ranked in ascending alphabetical
+order. The higher ranked team name was then appended to the preliminary
+name. In this regard, in reference to figure 8, and steps I and II above, the
+modified clip name becomes green-white-bosnia
+III. In the event the names of the participating teams could not be verified, the
+reference word “unknown” was appended to the new name from step II.
+IV. The video clip was then saved to into its corresponding class directory
+V. When a file name conflict occurred, especially with “unknown” name
+appended clips, a numeric value was appended to the clip name, separated
+by a hyphen. For example, green-white-bosnia-1.
+The essence of the conventions outlined above was to ensure that only one clip per
+action class was extracted from a downloaded soccer video. This was to avoid
+feature similarities existing in multiple clips. In addition, all actions were bounded
+to avoid multiple actions from overlapping in the same video clip. In all five action
+categories were annotated. This is shown in Table IV. The annotated actions are
+shown Appendix C. Video clips were sampled at 25 FPS and 30 FPS and were
+saved as MPEG-4 Part 14 (MP4) format. It is important to state that the list of
+soccer actions from Table IV is not the exhaustive list of all soccer actions. Other
+soccer action classes (not included in the scope of this work) includes foul
+(cautions, yellow and red cards), penalty kick, goal celebration and player
+substitution to name but a few. These and more action classes shall be considered
+in future works.
+32
+TABLE IV. LIST OF ANNOTATED SOCCER ACTIONS
+# Action category Clip count Clip length (sec)
+1 Centerline action 152 271
+2 Corner kick action 147 299
+3 Free kick action 149 311
+4 Goal action 153 317
+5 Throw-in action 143 281
+Total 744 1,479
+Figure 8. Nigeria versus Bosnia in the 2014 Brazil World Cup match. Nigeria is in green
+while Bosnia is in white. Foreground picture (from right to left): Ahmed Moses (22) and
+Zidan Misimovich (11) battle for the ball.
+33
+4.4.1.3 Soccer dataset annotation challenges
+Soccer action classes typically comprise many overlapping events. For example, a
+goal event may result from a free kick, a corner kick, a penalty kick or from a player
+kicking the ball from any position of the field of play into the goal. A center line
+action may include a free kick, a placed kick to restart a match or a throw-in event
+occurring close to the center line. Therefore, without context, soccer action
+recognition problems are challenging for neural network algorithms just as they are
+difficult for humans. For this reason, the scope of this research is limited to actions
+that can be distinctly identified without much context.
+4.4.2 Dataset preparation
+Data preparation involves cleaning and organizing datasets in ways that they are
+easy to work on by algorithms. In all data-driven applications, particularly deep
+learning applications, the success of the algorithms are highly influenced by the
+organization of training dataset. In preparing UCF101 and Soccer-5 datasets for
+this work, UCF101 video frames were extracted at 6 FPS while that of Soccer-5
+were sampled at 25 FPS. The videos were saved separately into directories bearing
+the name of the corresponding video clip. It is important to clarify that UCF101
+and Soccer-5 datasets were not mixed. All UCF101 extracted frames were
+separated from Soccer-5 extracted frames. As mentioned previously, not all
+UCF101 clips have the same dimension. A strict requirement for DNNs, however,
+is that all inputs must have the same dimensions. This anomaly was considered and
+resolved in the creation of Soccer-5 dataset.
+Input data to CNNs can be of any arbitrary dimension. The only requirement is that
+one dimension should cut across all the input volume. Typically, images used as
+input volumes to CNNs have square sizes. For example, in [28], all images were
+34
+resized and cropped to 220 x 220 pixels. Similarly, in the work executed in [46],
+all video frames were resized and cropped to 112 x 112 pixels. Accordingly, in this
+work, all extracted frames were scaled and resized to 112 by 112 pixels using the
+scaling and resizing algorithm in Appendix A.1. An advantage of image downsampling
+is that it allows for models to fit into memory and facilitates faster
+training. The disadvantage of this pre-processing practice, however, is that vital
+information may be lost. As pointed out by Samuel and Lina [29], image quality
+plays a vital role in the design of computer vision systems. In this regard, the
+implemented down-sampling algorithm referenced in Appendix A.1 was designed
+to ensure that the original aspect ratio of each frame was preserved to overcome
+the drawbacks mentioned in [29] during training.
+Restricting input size via rescaling alone does not guarantee the absence of
+abnormalities during training. There is also the need for input normalization. The
+purpose of data normalization is for all input dimensions to share a uniform
+distribution. The most commonly used normalization method is the mean-standard
+deviation normalizing. This method is implemented in two folds of arithmetic
+operations; 1) mean subtraction and 2) division by the standard deviation. This
+operation is expressed mathematically in equation 8, where 𝑛 , 𝑐𝑐, 𝑟 and 𝑎 denotes
+normalized, color channel, raw image and all images respectively. The abovementioned
+normalization approach was adopted for this work through the mean,
+and standard deviation estimation algorithm implemented in Appendix A.2. The
+mean and standard deviation values were calculated per color channel over the
+entire train-split-1 of the UCF101 dataset and Soccer-5. These values were saved
+to separate JSON files and used in normalizing the training and validation (test)
+datasets.
+𝐼𝑚𝑎𝑔𝑒𝑛,𝑐𝑐 =
+𝐼𝑚𝑎𝑔𝑒𝑟,𝑐𝑐− 𝑀𝑒𝑎𝑛𝑎,𝑐𝑐
+𝐷𝑒𝑣𝑖𝑎𝑡𝑖𝑜𝑛𝑎,𝑐𝑐
+(8)
+35
+4.4.3 Converting datasets to HDF5 file
+Datasets meant for neural network training are voluminous by nature. This is
+because the volume of input data has considerable influence on a model's
+generalization performance [29]. The bottleneck, however, is that, for most
+systems, datasets cannot be loaded into memory all at once due to size constraints.
+The seemingly logical approach to resolving this bottleneck is to load data in
+batches. However, low data read rate from storage devices adversely affects
+training time. Because slow read rate is hardware dependent, it cannot be
+manipulated by system developers. This problem is further compounded if loaded
+data needs to be pre-processed and or augmented before fed to a training algorithm.
+The training model will always have to wait for the input data, thereby increasing
+the time it takes for the model to converge.
+To resolve this bottleneck, all the UCF101 and Soccer-5 extracted frames were
+normalized using the mean and standard deviation results obtained from the
+estimation algorithm in Appendix A.2. The normalized data were then saved as
+separate Hierarchical Data Format 5 (HDF5) files [49]. HDF is a file format for
+storing and managing extremely large and complex numerical data. For each
+dataset category; UCF101 and Soccer-5, one pair of HDF5 files were created; the
+training set and the validation (test) set. Each row of the HDF5 data was made up
+of two columns; 1) the frame data and 2) the corresponding one-hot encoded label.
+The one-hot encoded label is a vector that spans the length of classes per dataset.
+The vector length for UCF101 and Soccer-5 were 101 and 5 respectively.
+4.4.4 3D-ResNet32 training
+As previously mentioned in section 4.2 of this document, each clip input volume
+was represented as 𝑙 𝑥 ℎ 𝑥 𝑤 𝑥 𝑐. ℎ, 𝑤, and 𝑐 were 112,112 and 3 respectively.
+3D-ResNet34 was first trained on UCF101 to help make an objective comparison
+36
+of its performance against benchmark algorithms specifically on human action
+recognition. As a way of finding the optimal value of 𝑙, different values of 𝑙, 𝑙 =
+{16, 32, 64, 128}, were experimented with. It was realized that the higher the 𝑙, the
+better the generalization of 3D-ResNet34. This progression is shown in Figure 9.
+The logical explanation for this is that 3D-ResNet34 learns better context with
+more frames. The performance was further slightly enhanced by increasing the
+frame extraction rate from 6 to 30 FPS. However, the marginal improvement was
+not significant enough to compensate for the exponential increase in trainable
+parameters and the size of the overall network.
+EFFECT OF FRAME COUNT ON 3D-RESNET’S VALIDATION ACCURACY
+Figure 9. The effect of frame count on 3D-ResNet34’s accuracy. This evaluation was
+performed using the UCF101 dataset. The average clip length for UCF101 is 10 to 15
+seconds, while the average clip length for Soccer-5 is 1 to 3 seconds. This accounts for
+the difference in the UCF101 and Soccer-5 frame extraction rate.
+37
+Because as much as 27.95% of UCF101 videos have less than 120 frames, 𝑙=64
+was used as the standard frame count. Indeed, some UCF101 clips do not generate
+up to 64 frames at the 6 FPS extraction rate. In such situations, frames were
+repeated until the desired 𝑙 was reached. Therefore each input tensor dimension
+was 64𝑥112𝑥112𝑥3. All frames were augmented using simple mean subtraction
+and scaling by the standard deviation.
+Stochastic Gradient Descent was used for the model optimization. The optimal
+initial learning rate after many attempts was found to be 3𝑒−3. This learning rate
+was divided by 10 after every 10,000 iterations with a decay rate of was 5𝑒−4.
+Preprocessed data from the HDF5 files were read with a batch size of 16. The result
+from training 3D-ResNet34 on UCF101 is compared with standard benchmarks
+and discussed in Chapter 5. Soccer-5 was split into two portions; 60 and 40%. For
+the simplicity, the 60% portion shall be referred to as Soccer-5-A, and the 40%
+portion shall be referred to as Soccer-5-B. Similar to UCF101, 3D-Resnet34 was
+also trained on Soccer-5-A to be used as feature extractor for soccer actions. The
+frame extraction rate for Soccer-5 was 30 FPS.
+4.4.5 LSTM-2048 training
+To speed up LSTM-2048 training, Soccer-5-A pre-trained 3D-Resnet34 was used
+to extract features from Soccer-5-B and saved separately as numpy array [63]. The
+features were extracted from the last pooling layer of 3D-Resnet34. Each row of
+the numpy array comprised of 1) extracted feature maps and 2) one hot encoded
+label. The extracted features were fed as input to LSTM-2048. On average, LSTM-
+2048 took three hours to converge. The results of LSTM-2048 are discussed in
+Chapter 5. For soccer highlight recognition, 3D-Resnet34 and the LSTM network
+were not used in isolation, unlike the training approach. The output of 3DResnet34’
+s pooling layer was directly fed to LSTM-2048 for inference making.
+38
+4.5 Video summarization
+Modelling the full length of soccer videos as a single input or as one collection of
+long sequential frames introduced unresolvable complexities. On of such
+complexities was the overlapping of multiple action scenes. This made it difficult
+to distinctively differentiate between action classes. Taking a cue from [57], soccer
+videos 𝑉 to be summarized were modeled as a sequential collection of concatenated
+video segments 𝑆𝑛, where 𝑛 is the 𝑛th segment of 𝑉 and 𝑡 is the duration of 𝑆𝑛 in
+seconds. Modelling input videos as concatenated segments helped to treat each
+segment as a potential highlight that could be independently evaluated against a
+ground truth table to determine its worthiness score 𝑤, in a summary video.
+Via a heuristic approach, it was determined that soccer actions from Table IV
+typically spanned 1 to 3 seconds. This parameter was used as a guide in setting the
+value for 𝑡 for every 𝑆𝑛. Thus, for every 𝑆𝑛, highlights 𝐻𝑡 were obtained for 𝑡 = {1,
+2 and 3}. A modified ranking technique from [64] was used to rank the best 𝐻𝑡 for
+every 𝑆𝑛,t. The video summarization process is illustrated in Figure 10.
+Figure 10. Example of soccer video summarization. Vt is a long soccer video. It is
+segmented by Figure 6 (a). Each segment is evaluated by Figure 6 (b), (c) and (d). If the
+worthiness score exceeds a threshold, the segment under consideration is deemed
+interesting and automatically joined to other interesting segments to produce a summary
+video. In this example, the threshold is set at 90% to monitor the transition of action
+events.
+39
+The variable wt is measured on the scale of 0 to 100%. Technically, the threshold
+for wt is the accuracy score for the 3D-Resnet34 + LSTM-2048 network showed in
+Table VI. However, it was found out that for specific durations of 𝑆𝑛, particularly
+for t=3, Ht contained superior scores that spanned at least two action classes. Such
+Ht were rejected by the model as fit candidates for summarization. This caused a
+marginal loss in action context. Through a heuristic approach, reducing the
+threshold by 0.81% provided an ad-hoc approach to enable action scenes to
+transition smoothly.
+40
+5 Performance evaluation
+This chapter discusses in detail the results obtained from training 3D-ResNet34 on
+the UCF101 and Soccer-5 dataset, and LSTM-2048 on the Soccer-5 dataset. It also
+compares the performance results to that of the benchmark algorithms discussed in
+Chapter 3. This chapter is concluded by outlining the human interventions used in
+the assessment of the entire soccer video summarization system.
+5.1 Highlight detector
+Using the pre-processed HDF5 dataset, training 3D-ResNet34 on UCF101 took on
+average two and a half days to converge fully. Without the pre-processed HDF5
+dataset, training took an extra three to four hours to complete. It is important to
+mention that, the size of the stacked frames, 𝑙, mentioned in Figure 9, affected the
+training duration. Table V shows the comparison result of 3D-ResNet34 trained on
+UCF101. Table VI shows the comparison results for 3D-ResNet34 and LSTM-
+2048 on Soccer-5 only.
+From Table V, 3D-ResNet34 marginally outperforms the current best ranking
+model [58] by a difference of 1.6%. During training, it was realized that increasing
+frame count in powers of 2 helped validation accuracy to increases significantly,
+however, not proportionally in powers of 2. Longer frame counts also increased the
+size of the training parameters considerably. Since all data could not fit into
+memory, a Python generator function was implemented to load data from
+corresponding preprocessed train and test HDF5 files in batches of 16 at a time.
+From Table VI, 3D-Resnet34+LSTM outperforms SIFT+BOW+LSTM [37] by a
+margin of 4.81%. As mentioned previously in Chapter 3, MICC-Soccer-4 is
+proprietary thus was not available for testing on the proposed highlight detection
+model. Therefore, agreeably, comparing 3D-Resnet34 + LSTM and SIFT + BOW
+41
++ LSTM may not be the fairest assessment considering the possible diversity
+between MICC-Soccer-4 and Soccer-5. That notwithstanding, the achievement of
+3D-ResNet34 as a soccer feature extractor is very commendable.
+5.2 Video summarizer
+The proposed summarization framework was prototyped into a responsive web
+application using Flask [65] and Celery [27]. This provided the flexibility to select
+desired soccer actions to be included in a summary video. The interface for the
+TABLE V. COMPARISON OF 3D-ResNet34 WITH STATE OF THE ART
+MODELS USING UCF101 DATASET ONLY
+Method Top 5 accuracy on UCF101
+C3D [46] 85.20 %
+Res3D [59] 85.80 %
+Two-stream CNN [56] 88.00 %
+Beyond short snippets [28] 90.08 %
+Spatiotemporal residual networks [58] 94.60 %
+3D-ResNet34 96.20 %
+TABLE VI. COMPARISON OF HIGHLIGHT DETECTION MODEL
+USING SOCCER-5
+Method Dataset Accuracy
+SIFT+BOW + LSTM [37] MICC-Soccer-4 92.00 %
+SIFT+BOW + LSTM [37] Soccer-5 84.69 %
+3D-ResNet34 only Soccer-5 91.23 %
+LSTM-2048 only Soccer-5 72.19 %
+3D-ResNet34 + LSTM-2048 Soccer-5 96.81 %
+42
+summarization application is showed in Appendix B.1. To evaluate the
+performance of the summarization framework, ten raw soccer match videos were
+downloaded from YouTube and summarized using the developed web application.
+These videos were never used during the creation of Soccer-5. Table VII below
+compares the duration of the downloaded soccer videos; before and after
+summarization. The summarized videos were then evaluated by 48 respondents
+from 8 counties; Canada, Great Britain, Ghana, Jamaica, Japan, Nepal, South Korea
+and the United States of America. The responses were collected via a developed
+web application. The Mean Opinion Score (MOS) [66] evaluation scale was used
+in evaluating the summarized videos. The interface of the evaluation application is
+shown in Appendix B.2. The evaluation responses are summarized in Table VIII,
+Figure 11 and Figure 12.
+TABLE VII. DURATION COMPARISON OF RAW AND SUMMARIZED
+SOCCER VIDEOS
+# Soccer videos
+Video duration ( HH: MM ) Number of
+Original Summarized evaluators
+1 Australia versus Brazil 01:48 00:12 ( ↓ 01:36) 32
+2 Germany versus Spain 01:49 00:11 ( ↓ 01:38) 31
+3 Brazil versus Argentina 01:56 00:12 ( ↓ 01:44) 30
+4 Germany versus England 01:35 00:16 ( ↓ 01:19) 31
+5 Brazil versus Croatiaa 01:49 00:03 ( ↓ 01:46) 35
+6 Argentina versus Italy 01:41 00:19 ( ↓ 01:22) 35
+7 Japan versus Australia 01:39 00:18 ( ↓ 01:21) 30
+8 Argentina versus Nigeria 01:51 00:22 ( ↓ 01:29) 31
+9 Australia versus Thailand 01:35 00:28 ( ↓ 01:07) 33
+10 France versus Spain 01:41 00:26 ( ↓ 01:15) 30
+Total 07:46 02:42 ( ↓ 05:04)
+a. Shortest summarized video. Only 1 of 5 action classes; goal (including near goal action)
+was included in the summary video.
+43
+TABLE VIII. EVALUATION RESPONSE DISTRIBUTION PER SUMMARISED
+SOCCER VIDEO
+#
+Summarized
+Soccer Videos
+Very
+Poor
+( 1 )
+Poor
+( 2 )
+Neutral
+( 3 )
+Good
+( 4 )
+Very
+Good
+( 5 )
+Highest
+Mean
+Opinion
+Score
+1 Australia VS Brazil 2 6 4 17 3 4
+2 Germany VS Spain 2 5 8 8 8 3, 4, 5
+3 Brazil VS Argentina 2 5 6 13 4 4
+4 Germany VS England 1 4 7 15 4 4
+5 Brazil VS Croatia 2 7 5 15 6 4
+6 Argentina VS Italy 2 4 6 16 7 4
+7 Japan VS Australia 2 3 11 12 2 4
+8 Argentina VS Nigeria 2 8 4 11 6 4
+9 Australia VS Thailand 2 5 10 12 4 4
+10 France VS Spain 1 3 6 15 5 4
+Total ( per rating ) 18 50 67 134 49
+Figure 11. Mean Opinion Score distribution of summarized soccer videos. Collectively
+“good” rating received the highest score out of a total of 318 evaluations.
+6%
+16%
+21%
+42%
+15%
+MEAN OPINION SCORE DISTRIBUTION
+Very Poor Poor Neutral Good Very Good
+44
+The combined length of the initially downloaded soccer videos was 7 hours 46
+minutes. The duration breakdown is shown in Table VII above. After
+summarization, the combined length of videos was 2 hours 42 minutes. Of the 48
+evaluation respondents, each respondent evaluated at least 6 of the 10 videos. The
+geographical distribution of the summarized soccer video evaluators is shown in
+Figure 13. The long length of the combined summarized videos is a reasonable
+explanation as to why all respondents did not evaluate every video. This once again
+affirms the notion that soccer enthusiasts prefer shorter videos to longer videos.
+Therefore, to ensure an even distribution of assessment, summarized videos were
+presented to different evaluators in a random order. Collectively, the summarized
+videos received a 4 of 5 rating, where 4 is a good score in reference to Table VIII.
+Figure 12. Evaluation score distribution per summarized soccer video. Of the 48 pooled
+evaluators, each person evaluated at least 6 of 10 videos. Also, each video received at
+least 30 of 48 independent evaluations.
+45
+Figure 13. The geographical distribution of summarised video evaluators.
+1
+12
+2
+3
+1
+26
+1
+2
+0
+5
+10
+15
+20
+25
+30
+CANADA GHANA BRITAIN JAMAICA JAPAN S. KOREA NEPAL USA
+Number of respondents
+List of countries
+THE GEOGRAPHICAL DISTRIBUTION OF EVALUATORS
+46
+6 Conclusion
+This research work identified the many challenges associated with traditional video
+summarization techniques. Key amongst such difficulties are the computational
+complexities of the algorithms and the inability to choose peculiar actions that
+should be included in a soccer video summary. Therefore, in the execution of this
+work, the objective was to implement an effective scalable automatic soccer video
+summarization technique that provides analysts the ability to choose a list of
+predefined soccer actions that should be included in a summarized video.
+In this work, a novel soccer feature extracting deep learning framework was
+proposed and implemented. Codenamed 3D-ResNet34, this feature extractor was
+trained on the UCF101 dataset to compare its efficiency against industry
+benchmarks objectively. Trained on 64 frames per each UCF101 clip, 3DResNet34
+improved marginally against the current best action recognition
+framework by a difference of 1.6%. In the absence of publicly available soccer
+datasets, soccer videos were downloaded and annotated into the Soccer-5 dataset.
+Convinced on the superior generalization of 3D-ResNet34, 3D-ResNet34 was
+trained on a portion of Soccer-5 to model a feature extractor. A basic LSTM
+network was trained on soccer features extracted from 3D-ResNet34. The
+combined model was then used to detect soccer highlights for summarization.
+To summarize soccer videos, the input videos were modelled as a sequential
+collection of concatenated video segments. By recognizing each segment as a
+highlight, it was possible to independently evaluate each segment against a truth
+table to determine its importance in a summary video. To evaluate the
+summarization framework, ten soccer videos were downloaded and summarized.
+48 participants drawn from 8 countries evaluated the quality of the summarized
+soccer videos based on the Mean Opinion Score evaluation scale. The analysis of
+47
+the evaluation results shows that respondents were satisfied with the quality of the
+videos produced by the summarization algorithm. The model was rated 4 out of 5
+scores, where, 1 and 5 are the least and most scores respectively.
+The main advantage of this summarization approach over existing summarization
+techniques is that it saves time considerably. Using this system, video analysts can
+narrow down to specific soccer events without having to watch an entire
+summarized video content. Another advantage of this summarization framework is
+that it can be used to automatically annotate actions from raw soccer videos.
+Although this research was specific to soccer, with little modification, it can be
+adapted to some soccer-related sports such as handball, rugby, netball and
+volleyball.
+6.1 Future works
+This research has demonstrated that longer clips positively influence neural
+networks to learn spatiotemporal representations better. However, longer clips
+suffer from frequent scene change or overlapping actions. This characteristic
+makes the use of longer clips for training NNs a very daunting task. This challenge
+shall serve as the foundation for future soccer video summarization works. In
+addition, other soccer action clips not included in the annotation of the Soccer-5
+dataset such as penalty kick, foul (cautions, yellow and red cards), goal celebration
+and player substitution shall be created
+48
+Bibliography
+[1] FIFA, Fact Sheet, Available:
+https://www.fifa.com/mm/document/fifafacts/mencompovw/51/99/03/133485-factsheetfifahostcountriesoverview1930-
+2022.pdf, [Accessed: Sep. 25, 2018].
+[2] T. Stølen, K. Chamari, C. Castagna and U. Wisløff, Physiology of soccer: Sports
+medicine, 35(6), 501-536, 2005.
+[3] BBC Sport: Football, Pitch dimensions, Available:
+http://news.bbc.co.uk/sport2/hi/football/rules_and_equipment/4200666.stm, [Accessed:
+Sep. 25, 2018].
+[4] C. Agner, The Neuron: Cell and Molecular Biology, Shock, 18(6), 589, pp. 163-194,
+2002.
+[5] D. J. Haas, Technical efficiency in the major league soccer, Journal of Sports
+Economics, 4(3), 203-215, 2003.
+[6] M. Matsuoka De Aragao, Economic Impacts of the FIFA World Cup in Developing
+Countries, Thesis, Western Michigan University, 2015
+[7] J. Barclay, Predicting the costs and benefits of mega-sporting events: misjudgment of
+Olympic proportions?, Economics Affairs, 29(2), 62-66, 2009.
+[8] Statista, Market size of the European professional football market from 2006/07 to
+2015/16 (in billion Euros), Available:
+https://www.statista.com/statistics/261223/european-soccer-market-total-revenue/,
+[Accessed: Jun. 25, 2018].
+[9] S. Chadwick, The Economic Impact of The World Cup, Economy Watch, Available:
+http://www.economywatch.com/features/economic-impact-brazil-world-cup.16-06.html,
+[Accessed: Jun. 26, 2018].
+[10] J. Patterson and A. Gibson, Deep Learning: A Practitioner's Approach. O’Reilly
+Media, Inc., 2017.
+[11] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner, Gradient-based learning applied to
+document recognition, Proceedings of the IEEE, 86(11), 2278-2324, 1998.
+[12] A. Krizhevsky, I. Sutskever, and G. E. Hinton, Imagenet classification with deep
+convolutional neural networks, In Advances in neural information processing systems, pp.
+1097-1105, 2012.
+49
+[13] K. Simonyan and A. Zisserman, Very deep convolutional networks for large-scale
+image recognition, arXiv preprint, arXiv: 1409.1556, 2014.
+[14] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. Reed, D. Anguelov, and A. Rabinovich,
+Going deeper with convolutions, In Proceedings of the IEEE conference on computer
+vision and pattern recognition, pp. 1-9, 2015.
+[15] K. He, X. Zhang, S. Ren and J. Sun, Deep residual learning for image recognition, In
+Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 770-
+778, 2016.
+[16] R. Bracewell, Convolution and Two-Dimensional Convolution, Chapter 3, In The
+Fourier Transform and Its Applications, New York: McGraw-Hill, pp. 25-50 and 243-244,
+1965, 2016.
+[17] A. Rosebrock, Deep Learning for Computer Vision with Python: Practitioner Bundle,
+PYIMAGESEARCH, 2017.
+[18] S. Ioffe and C. Szegedy, Batch normalization: Accelerating deep network training by
+reducing internal covariate shift, arXiv preprint, arXiv: 1502.03167, 2015.
+[19] G. Swirszcz, W. M. Czarnecki, and R. Pascanu, Local minima in training of deep
+networks, 2016.
+[20] R. Pascanu, T. Mikolov, and Y. Bengio, On the difficulty of training recurrent neural
+networks, In International Conference on Machine Learning, pp. 1310 - 1318, Feb. 2013.
+[21] M. Baker, Cluster computing white paper. arXiv preprint cs/0004014, 2000.
+[22] K. He, X. Zhang, S. Ren and J. Sun, Identity mappings in deep residual networks, In
+European conference on computer vision, pp. 630-645, Springer, Oct. 2016.
+[23] S. Hochreiter and J. Schmidhuber, Long short-term memory, Neural computation,
+9(8), 1735-1780, 1997.
+[24] F. A. Gers, J. Schmidhuber and F. Cummins, Learning to forget: Continual prediction
+with LSTM, 1999.
+[25] K. Soomro and A. R. Zamir, and M. Shah, UCF101: A dataset of 101 human actions
+classes from videos in the wild, arXiv preprint, arXiv: 1212.0402, 2012.
+[26] H. Kuehne, H. Jhuang, E. Garrote, T. Poggio and T. Serre, HMDB: a large video
+database for human motion recognition, In Proceedings of the International Conference on
+Computer Vision (ICCV), 2011.
+[27] J. Palach, Parallel Programming with Python, Packt Publishing Ltd, 2014.
+50
+[28] J. Yue-Hei Ng, M. Hausknecht, S. Vijayanarasimhan, O. Vinyals, R. Monga, and G.
+Toderici, Beyond short snippets: Deep networks for video classification, In Proceedings
+of the IEEE conference on computer vision and pattern recognition, pp. pp. 4694-4702,
+2015.
+[29] S. Dodge and L. Karam, Understanding how image quality affects deep neural
+networks, In Eighth International Conference on Quality of Multimedia Experience, pp. 1-
+6, Jun. 2016.
+[30] S. Tong and D. Koller, Support vector machine active learning with applications to
+text classification, Journal of machine learning research, 45-66. Nov. 2001.
+[31] I. Laptev, On space-time interest points. International journal of computer vision,
+64(2-3), 107-123, 2005.
+[32] X. Peng, L. Wang, X. Wang and Y. Qiao, Bag of visual words and fusion methods
+for action recognition: Comprehensive study and good practice, Computer Vision and
+Image Understanding, 150, 109-125, 2016.
+[33] A. A. Chaaraoui, P. Climent-Pérez and F. Flórez-Revuelta, Silhouette-based human
+action recognition using sequences of key poses, Pattern Recognition Letters, 34(15),
+1799-1807, 2013.
+[34] Y. Bengio, P. Simard and P. Frasconi, Learning long-term dependencies with gradient
+descent is difficult. IEEE transactions on neural networks, 5(2), 157-166, 1994.
+[35] L. Bottou, Stochastic gradient descent tricks, In Neural networks: Tricks of the trade,
+pp. 421-436, 2012, Springer, Berlin, Heidelberg.
+[36] J. Assfalg, M. Bertini, C. Colombo, A. D. Bimbo and W. Nunziati, Automatic
+extraction and annotation of soccer video highlights, In IEEE International Conference on
+Image Processing, Vol. 2, pp. II-527, Sep. 2003.
+[37] M. Baccouche, F. Mamalet, C. Wolf, C. Garcia and A. Baskurt, Action classification
+in soccer videos with long short-term memory recurrent neural networks, In International
+Conference on Artificial Neural Networks, pp. 154-159, Sep. 2010, Springer,
+[38] Y. Zhang, R. Jin, and Z. H. Zhou, Understanding bag-of-words model: a statistical
+framework, International Journal of Machine Learning and Cybernetics, 1(1-4), 43-52,
+2010.
+[39] T. Lindeberg, Scale invariant feature transform, 2012.
+51
+[43] A. Tejero-de-Pablos, Y. Nakashima, T. Sato, N. Yokoya, M. Linna, and E. Rahtu,
+Summarization of User-Generated Sports Video by Using Deep Action Recognition
+Features, arXiv preprint, arXiv:1709.08421, 2017.
+[44] Wikipedia. Kendo. Available: https://en.wikipedia.org/wiki/Kendo. [Accessed: Sep.
+29, 2018].
+[45] Z. Zhao, S. Jiang, Q. Huang and G. Zhu, Highlight summarization in sports video
+based on replay detection, In IEEE International Conference on Multimedia and Expo, pp.
+1613-1616, Jul. 2006.
+[46] D. Tran, L. Bourdev, R. Fergus, L. Torresani and M. Paluri, Learning spatiotemporal
+features with 3d convolutional networks, In Proceedings of the IEEE international
+conference on computer vision, pp. 4489-4497, 2015.
+[47] A. Karpathy, G. Toderici, S. Shetty, T. Leung, R. Sukthankar and L. Fei-Fei, Largescale
+video classification with convolutional neural networks. In Proceedings of the IEEE
+conference on Computer Vision and Pattern Recognition, pp. 1725-1732, 2014.
+[48] G. Bradski and A. Kaehler, OpenCV. Dr Dobb's journal of software tools, 3, 2000.
+[49] E. M. Sibarani, P. Wagenaars and G. Bakema, A Typical Case of Recommending the
+Use of a Hierarchical Data Format, International Journal of Database Management
+Systems, 4(6), 27, 2012.
+[50] S. Xie, R. Girshick, P. Dollár, Z. Tu, and K. He, Aggregated residual transformations
+for deep neural networks, In IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR), pp. 5987-5995, Jul. 2017.
+[51] G. Huang, Z. Liu, M. Van Der and K. Q. Weinberger, Densely Connected
+Convolutional Networks, In CVPR, Vol. 1, No. 2, p. 3, Jul. 2017.
+[52] F. A. Gers and J. Schmidhuber, Recurrent nets that time and count, In Proceedings of
+the IEEE-INNS-ENNS International Joint Conference on Neural Networks,Vol. 3, pp.
+189-194, 2000.
+[53] Wikipedia, 2018 FIFA World Cup, Available:
+https://en.wikipedia.org/wiki/2018_FIFA_World_Cup. [Accessed: Nov. 8, 2018].
+[54] Z. Ji, Y. Su, R. Qian and J. Ma. Surveillance video summarization based on moving
+object detection and trajectory extraction, In IEEE International Conference on Signal
+Processing Systems (ICSPS), Vol. 2, pp. V2-250, July 2010.
+52
+[55] W. Widiarto, E. M. Yuniarno and M. Hariadi, Video summarization using a keyframe
+selection based on shot segmentation, In IEEE International Conference on Science in
+Information Technology, Oct. 2015.
+[56] K. Simonyan and A. Zisserman, Two-stream convolutional networks for action
+recognition in videos, In NIPS, 2014.
+[57] L. Wang, Y. Xiong, Z. Wang, Y. Qiao, D. Lin, X. Tang and L. Van Gool, Temporal
+segment networks: Towards good practices for deep action recognition, In European
+Conference on Computer Vision, pp. 20-36, Oct. 2016.
+[58] C. Feichtenhofer, A. Pinz and R. Wildes, Spatiotemporal residual networks for video
+action recognition, In NIPS, 2016.
+[59] D. Tran, J. Ray, Z Shou, S. F. Chang and M. Paluri, Convnet architecture search for
+spatiotemporal feature learning, arXiv preprint arXiv:1708.05038 , 2017.
+[60] M. Lin, Q. Chen, and S. Yan, Network in network, arXiv preprint, arXiv:1312.4400,
+2013.
+[61] M. Abadi, P. Barham, J Chen, Z. Chen, A. Davis, J. Dean and M. Kudlur, Tensorflow:
+a system for large-scale machine learning, In OSDI (Vol. 16, pp. 265-283), Nov. 2016.
+[62] F. Chollet, Keras, 2015.
+[63] S. V. D. Walt, S. C. Colbert and G. Varoquaux, The NumPy array: a structure for
+efficient numerical computation, Computing in Science and Engineering, 13(2), 22-30,
+2011.
+[64] X. Tong, Q. Liu, Y. Zhang and H. Lu, Highlight ranking for sports video browsing,
+In Proceedings of the 13th annual ACM international conference on Multimedia, pp. 519-
+522, Nov. 2005.
+[65] M. Grinberg, Flask web development: developing web applications with python.
+O'Reilly Media, Inc., 2018.
+[66] R. C Streijl, S. Winkler, and D. S. Hands, Mean opinion score (MOS) revisited:
+methods and applications, limitations and alternatives. Multimedia Systems, 22(2), 213-
+227, 2016.
+53
+Appendices A: Algorithms
+Appendix A.1 Frame scaling and resizing algorithm
+Input: video frame, f ⊆ video, v
+Output: numpy array of resized frame
+1 begin
+2 s  expected square size,
+3 fw, fh  extract dimension of the frame using openCV
+4
+5 if fw > fh
+6 scale  s / fh
+7 image  resize frame to (fw*scale + 1) by s dimension
+8 endif
+9
+10 else
+11 scale  s / fw
+12 image  resize frame to s by (fh*scale + 1) dimension
+13 end else
+14
+15 image  crop image to fit s by s (square) dimension
+16 image  convert resized image to numpy array
+17 return image
+18 end
+Appendix B.2: Mean and standard deviation estimation algorithm
+Input: video frame, f ⊆ video data set
+Output: mean & deviation per color channel, m(R, G, B) & s(R, G, B)
+1 begin
+2 counter  0
+3 m(R, G, B)  s(R, G, B)  0
+4
+5 while frame is available
+6 f  rescale input frame
+7 (R, G, B)  split f to RGB color channels
+8 m(R, G, B)  m(R, G, B) + mean of (R, G, B)
+9 s(R, G, B)  s(R, G, B) + deviation of (R, G, B)
+10 counter  counter + 1
+11 end while
+12
+13 m(R, G, B)  m(R, G, B) / counter
+14 s(R, G, B)  s(R, G, B) / counter
+15
+16 write m(R, G, B) and s(R, G, B) to separate JSON files
+17 end
+54
+Appendix B: Applications
+Appendix B.1: Interface of the prototyped soccer video summarizer application.
+55
+Appendix B.2: Interface of the summarized soccer video evaluation application
+56
+Appendix C: Soccer-5 dataset action classes
+57
+딥러닝 기반 자동 축구 영상 요약
+아지만락슨
+영남대학교 대학원
+정보통신공학과 정보통신공학전공
+( 지도교수 최규상 )
+요약
+축구는 미디어 방송을 통해 사람들이 가장 즐기는 스포츠 중 하나로 자리매김했다. 이러한
+인기 때문에, 방송사들은 요약된 매치 콘텐트를 생성하기 위한 가장 편리한 기술을
+계속해서 찾고 있다. 이러한 목적을 위해 채택된 기술들 중 흔한 것은 전통적인 비디오
+편집인데, 이것은 시간이 많이 걸리고 많은 기술이 필요하다. 그러므로, 이 연구는 축구
+비디오 요약에 대한 딥 러닝 기술을 제시한다. 이 기술은 3차원 (3D), 콜볼루션
+신경망(CNN), Long Short-Term Memory(LSTM)-순환 신경망(RNN) 의 공간적 특성 학습
+능력을 활용한다. 본 논문에서 제안된 접근법은 1) UCF101 데이터세트를 벤치마크하여
+기존 모델보다 인간 행동을 더 잘 학습하는 3차원 잔류 신경망(3D-ResNet)를 통해
+아키텍처를 단계별로 검색하고, 2) 5개의 축구 행동 부류를 기준으로 744개의 축구 클립을
+수동으로 수집하고 분류하였으며 3) 3D-ResNet의 기능을 적용하여 축구 영상의 특징 추출
+능력으로 확장하였고 4) 3D-ResNet을 통해 추출한 축구 영상 특징을 LSTM network를
+통해 학습한다. 이 완성된 모델은 축구의 하이라이트 영상 인식을 위해 사용된다. 긴 축구
+비디오를 요약하기 위해, 각 비디오는 연쇄된 비디오 세그먼트들의 연속된 집합체로
+모델링되며 제작된 하이라이트 요약 비디오는 나누어진 비디오 세그먼트들의 적절성
+검증을 기반으로 제작된다. 본 연구는 제안된 모델을 사용하여 요약하였고 10개의
+58
+처리되지 않은 축구 경기 비디오를 다운로드하여 시스템 평가에 사용하였으며 8개국에서
+온 48명의 참가들이 요약된 비디오를 평가하였다. 평균 의견 점수 (MOS) 척도는 요약된
+비디오를 평가하기 위해 사용되었다. 종합적으로, 요약된 비디오는 5점 만점에 4점을
+받았는데 여기서 1점은 가장 낮은 점수 5점이 가장 높은 점수에 해당된다. 이 연구를 통해,
+더 긴 비디오 클립이 신경 네트워크가 공간적 특징을 더 잘 배우도록 돕는다는 것이
+확인되고 증명되었다. 하지만 긴 비디오 클립의 빈번한 장면 변화는 사건 중복과 같은
+엄청난 문제를 야기한다. 이러한 문제점은 미래의 연구를 위한 기반이 된다. 최소한의
+수정으로, 본 연구에서 다루어지는 요약 기술은 핸드볼 또는 네트볼과 같은 축구와 비슷한
+스포츠에 적용될 수 있다.

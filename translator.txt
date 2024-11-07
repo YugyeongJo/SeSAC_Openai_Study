@@ -1,0 +1,1605 @@
+2024-11-05 09:40:46 | Expected Pricing: 1.0355 | Time elapsed: f1.433
+Results: C'est comme être dans une confiserie.
+
+2024-11-05 09:40:48 | Expected Pricing: 1.0307 | Time elapsed: f1.795
+Results: Je possède un cheval.
+
+2024-11-05 09:40:50 | Expected Pricing: 1.0384 | Time elapsed: f1.644
+Results: Comment as-tu fait pour les voir en train de le faire ?
+
+2024-11-05 09:40:51 | Expected Pricing: 1.0334 | Time elapsed: f1.256
+Results: À quoi est-ce que je consens ?
+
+2024-11-05 09:40:52 | Expected Pricing: 1.0326 | Time elapsed: f1.178
+Results: Concentre-toi, Tom.
+
+2024-11-05 09:40:54 | Expected Pricing: 1.0353 | Time elapsed: f1.771
+Results: Au moins, ils m'ont écouté.
+
+2024-11-05 09:40:56 | Expected Pricing: 1.0349 | Time elapsed: f1.855
+Results: Tom a une fille qui est musicienne.
+
+2024-11-05 09:40:57 | Expected Pricing: 1.0338 | Time elapsed: f1.576
+Results: Personne ne s'est échappé.
+
+2024-11-05 09:40:59 | Expected Pricing: 1.0336 | Time elapsed: f1.749
+Results: Plus grand n'est pas toujours mieux.
+
+2024-11-05 09:41:00 | Expected Pricing: 1.0311 | Time elapsed: f1.359
+Results: Je retourne au bureau.
+
+2024-11-05 09:41:02 | Expected Pricing: 1.0366 | Time elapsed: f1.268
+Results: Mon grand-père était soldat pendant la guerre.
+
+2024-11-05 09:41:03 | Expected Pricing: 1.0361 | Time elapsed: f1.892
+Results: Désolé, je ne peux pas t'aider.
+
+2024-11-05 09:41:06 | Expected Pricing: 1.0370 | Time elapsed: f2.031
+Results: Je n'arrive pas à croire que cela soit réellement arrivé.
+
+2024-11-05 09:41:07 | Expected Pricing: 1.0332 | Time elapsed: f1.3
+Results: Que fais-tu dans la vie ?
+
+2024-11-05 09:41:08 | Expected Pricing: 1.0340 | Time elapsed: f1.389
+Results: Tu devrais étudier plus sérieusement.
+
+2024-11-05 09:41:10 | Expected Pricing: 1.0389 | Time elapsed: f1.974
+Results: Il me fait du mauvais temps, comme il le fait toujours.
+
+2024-11-05 09:41:12 | Expected Pricing: 1.0328 | Time elapsed: f2.055
+Results: J'aurais dû t'écouter.
+
+2024-11-05 09:41:14 | Expected Pricing: 1.0338 | Time elapsed: f1.599
+Results: Nous nous connaissons depuis trente ans.
+
+2024-11-05 09:41:15 | Expected Pricing: 1.0395 | Time elapsed: f1.578
+Results: Je connais la raison, mais je ne peux pas te le dire.
+
+2024-11-05 09:41:17 | Expected Pricing: 1.0366 | Time elapsed: f1.747
+Results: Les nuages flottant dans le ciel sont magnifiques.
+
+2024-11-05 09:41:18 | Expected Pricing: 1.0307 | Time elapsed: f1.234
+Results: J'ai deux livres.
+
+2024-11-05 09:41:20 | Expected Pricing: 1.0378 | Time elapsed: f1.374
+Results: Faisons comme si nous n'avions pas entendu cela.
+
+2024-11-05 09:41:21 | Expected Pricing: 1.0315 | Time elapsed: f1.146
+Results: Il m'a pincé !
+
+2024-11-05 09:41:22 | Expected Pricing: 1.0370 | Time elapsed: f1.051
+Results: Je veux t'aider à sortir de ce pétrin.
+
+2024-11-05 09:41:24 | Expected Pricing: 1.0326 | Time elapsed: f1.66
+Results: Prends une bière avec moi.
+
+2024-11-05 09:41:25 | Expected Pricing: 1.0307 | Time elapsed: f1.665
+Results: Comment est-ce possible ?
+
+2024-11-05 09:41:27 | Expected Pricing: 1.0422 | Time elapsed: f2.048
+Results: Malgré le fait qu'elle était occupée, elle est venue me voir.
+
+2024-11-05 09:41:29 | Expected Pricing: 1.0345 | Time elapsed: f1.519
+Results: Je souhaite qu'elle soit en vie maintenant.
+
+2024-11-05 09:41:31 | Expected Pricing: 1.0471 | Time elapsed: f2.105
+Results: J'ai entendu dire qu'un homme paralysé a été dévoré vivant par des asticots.
+
+2024-11-05 09:41:33 | Expected Pricing: 1.0332 | Time elapsed: f1.841
+Results: Le feu s'est éteint.
+
+2024-11-05 09:41:37 | Expected Pricing: 1.0305 | Time elapsed: f3.778
+Results: Les temps ont changé.
+
+2024-11-05 09:41:38 | Expected Pricing: 1.0307 | Time elapsed: f1.487
+Results: Tu es si belle.
+
+2024-11-05 09:41:39 | Expected Pricing: 1.0382 | Time elapsed: f1.193
+Results: Je n'aime pas sortir après la tombée de la nuit.
+
+2024-11-05 09:41:40 | Expected Pricing: 1.0336 | Time elapsed: f1.186
+Results: Je ne vais pas donner de noms.
+
+2024-11-05 09:41:42 | Expected Pricing: 1.0336 | Time elapsed: f1.933
+Results: Dis-moi simplement ce que tu veux.
+
+2024-11-05 09:41:44 | Expected Pricing: 1.0345 | Time elapsed: f1.223
+Results: J'ai apprécié parler avec ma copine.
+
+2024-11-05 09:41:46 | Expected Pricing: 1.0355 | Time elapsed: f1.882
+Results: Mère avait peur que je me salisse.
+
+2024-11-05 09:41:47 | Expected Pricing: 1.0399 | Time elapsed: f1.558
+Results: Notre train était déjà parti lorsque nous sommes arrivés à la gare.
+
+2024-11-05 09:41:49 | Expected Pricing: 1.0317 | Time elapsed: f1.608
+Results: De qui parles-tu ?
+
+2024-11-05 09:41:50 | Expected Pricing: 1.0345 | Time elapsed: f1.255
+Results: Tom est sur la liste d'honneur.
+
+2024-11-05 09:41:52 | Expected Pricing: 1.0345 | Time elapsed: f1.734
+Results: Tom savait que Marie l'aimait.
+
+2024-11-05 09:41:53 | Expected Pricing: 1.0406 | Time elapsed: f1.21
+Results: Le tarif pour des sièges au premier rang est de 5 dollars.
+
+2024-11-05 09:41:55 | Expected Pricing: 1.0305 | Time elapsed: f1.856
+Results: Je t'ai suivi.
+
+2024-11-05 09:41:56 | Expected Pricing: 1.0343 | Time elapsed: f1.671
+Results: Quand rentrera-t-il chez lui ?
+
+2024-11-05 09:41:58 | Expected Pricing: 1.0378 | Time elapsed: f1.332
+Results: Combien de livres puis-je emprunter en même temps ?
+
+2024-11-05 09:42:00 | Expected Pricing: 1.0355 | Time elapsed: f1.98
+Results: Je veux juste t'aider à te détendre.
+
+2024-11-05 09:42:02 | Expected Pricing: 1.0324 | Time elapsed: f1.997
+Results: Tu es à court de sucre.
+
+2024-11-05 09:42:03 | Expected Pricing: 1.0334 | Time elapsed: f1.083
+Results: Il se tenait contre le mur.
+
+2024-11-05 09:42:05 | Expected Pricing: 1.0334 | Time elapsed: f1.694
+Results: C'est un jeune réalisateur talentueux.
+
+2024-11-05 09:42:06 | Expected Pricing: 1.0334 | Time elapsed: f1.408
+Results: Quel est l'année de votre naissance ?
+
+2024-11-05 09:42:07 | Expected Pricing: 1.0307 | Time elapsed: f1.304
+Results: Il respire fortement.
+
+2024-11-05 09:42:09 | Expected Pricing: 1.0435 | Time elapsed: f1.981
+Results: Dites-nous ce que vous voulez et nous essaierons de l'obtenir pour vous.
+
+2024-11-05 09:42:11 | Expected Pricing: 1.0454 | Time elapsed: f1.534
+Results: Ne sois pas si maussade à ce sujet. La vie a ses hauts et ses bas.
+
+2024-11-05 09:42:12 | Expected Pricing: 1.0328 | Time elapsed: f1.2
+Results: Alors, tu l'aimes ?
+
+2024-11-05 09:42:14 | Expected Pricing: 1.0445 | Time elapsed: f1.583
+Results: Si tu étais resté, tu aurais rencontré la fille avec qui je sors.
+
+2024-11-05 09:42:15 | Expected Pricing: 1.0338 | Time elapsed: f1.053
+Results: Il lui demanda où était sa mère.
+
+2024-11-05 09:42:16 | Expected Pricing: 1.0374 | Time elapsed: f1.214
+Results: Tu ferais mieux de ne pas veiller trop tard.
+
+2024-11-05 09:42:17 | Expected Pricing: 1.0343 | Time elapsed: f1.044
+Results: Nous n'avions pas d'eau potable.
+
+2024-11-05 09:42:18 | Expected Pricing: 1.0315 | Time elapsed: f1.18
+Results: Le temps est menaçant.
+
+2024-11-05 09:42:20 | Expected Pricing: 1.0313 | Time elapsed: f1.92
+Results: Tom doit travailler seul.
+
+2024-11-05 09:42:22 | Expected Pricing: 1.0303 | Time elapsed: f1.612
+Results: Ne pas interrompre.
+
+2024-11-05 09:42:23 | Expected Pricing: 1.0382 | Time elapsed: f1.237
+Results: C'est la personne la plus avare que je connaisse.
+
+2024-11-05 09:42:25 | Expected Pricing: 1.0378 | Time elapsed: f2.17
+Results: Y a-t-il quelque chose d'autre qui se passe ici ?
+
+2024-11-05 09:42:27 | Expected Pricing: 1.0324 | Time elapsed: f1.653
+Results: J'ai effectivement vu quelque chose.
+
+2024-11-05 09:42:28 | Expected Pricing: 1.0326 | Time elapsed: f1.81
+Results: J'aime vraiment vos peintures.
+
+2024-11-05 09:42:30 | Expected Pricing: 1.0355 | Time elapsed: f1.803
+Results: Tu n'aurais pas pu choisir un meilleur endroit.
+
+2024-11-05 09:42:32 | Expected Pricing: 1.0361 | Time elapsed: f1.325
+Results: Tu devrais lui acheter des jouets neufs.
+
+2024-11-05 09:42:33 | Expected Pricing: 1.0319 | Time elapsed: f1.863
+Results: Il faisait frais là-bas.
+
+2024-11-05 09:42:35 | Expected Pricing: 1.0332 | Time elapsed: f1.625
+Results: Je n'ai tout simplement pas faim.
+
+2024-11-05 09:42:37 | Expected Pricing: 1.0338 | Time elapsed: f1.85
+Results: Je te trouverai un bon médecin.
+
+2024-11-05 09:42:38 | Expected Pricing: 1.0345 | Time elapsed: f1.171
+Results: Ces arbres ont été plantés par eux.
+
+2024-11-05 09:42:40 | Expected Pricing: 1.0361 | Time elapsed: f1.929
+Results: Il m'a sculpté une poupée en bois.
+
+2024-11-05 09:42:41 | Expected Pricing: 1.0340 | Time elapsed: f1.265
+Results: Ma voiture a besoin d'être lavée.
+
+2024-11-05 09:42:43 | Expected Pricing: 1.0366 | Time elapsed: f1.42
+Results: Tu aurais dû suivre les conseils de ton père.
+
+2024-11-05 09:42:44 | Expected Pricing: 1.0307 | Time elapsed: f1.487
+Results: J'aurais dû demander.
+
+2024-11-05 09:42:46 | Expected Pricing: 1.0387 | Time elapsed: f1.412
+Results: Une phrase n'a pas besoin d'être longue pour être belle.
+
+2024-11-05 09:42:47 | Expected Pricing: 1.0342 | Time elapsed: f0.955
+Results: Je ne sais pas conduire une voiture.
+
+2024-11-05 09:42:48 | Expected Pricing: 1.0330 | Time elapsed: f1.94
+Results: Je suis allé faire de la randonnée.
+
+2024-11-05 09:42:50 | Expected Pricing: 1.0376 | Time elapsed: f1.954
+Results: Ne sachant pas quoi faire, je n'ai rien fait.
+
+2024-11-05 09:42:52 | Expected Pricing: 1.0326 | Time elapsed: f1.977
+Results: Nous devons maîtriser nos passions.
+
+2024-11-05 09:42:54 | Expected Pricing: 1.0315 | Time elapsed: f1.777
+Results: Votre amitié est importante.
+
+2024-11-05 09:42:56 | Expected Pricing: 1.0326 | Time elapsed: f1.803
+Results: Je n'ai toujours rien trouvé.
+
+2024-11-05 09:42:58 | Expected Pricing: 1.0389 | Time elapsed: f2.056
+Results: J'adore les vieux films de gangsters d'avant-guerre.
+
+2024-11-05 09:42:59 | Expected Pricing: 1.0313 | Time elapsed: f1.16
+Results: Tu m'as déçu.
+
+2024-11-05 09:43:01 | Expected Pricing: 1.0336 | Time elapsed: f1.372
+Results: L'ours mangeait une pomme.
+
+2024-11-05 09:43:02 | Expected Pricing: 1.0321 | Time elapsed: f1.293
+Results: Elle l'a embrassé.
+
+2024-11-05 09:43:04 | Expected Pricing: 1.0403 | Time elapsed: f2.415
+Results: Allez, dépêche-toi. Tu vas rater le bus.
+
+2024-11-05 09:43:06 | Expected Pricing: 1.0317 | Time elapsed: f1.79
+Results: As-tu peur de ça ?
+
+2024-11-05 09:43:08 | Expected Pricing: 1.0326 | Time elapsed: f1.895
+Results: Il a travaillé toute la nuit.
+
+2024-11-05 09:43:09 | Expected Pricing: 1.0353 | Time elapsed: f1.395
+Results: Souhaitez-vous un peu plus de café ?
+
+2024-11-05 09:43:11 | Expected Pricing: 1.0351 | Time elapsed: f1.877
+Results: Elle lui a expliqué comment résoudre le puzzle.
+
+2024-11-05 09:43:13 | Expected Pricing: 1.0374 | Time elapsed: f1.569
+Results: J'aimerais voir cette bague, s'il vous plaît.
+
+2024-11-05 09:43:14 | Expected Pricing: 1.0382 | Time elapsed: f1.273
+Results: Personne ne sait ce qui l'ennuie autant.
+
+2024-11-05 09:43:15 | Expected Pricing: 1.0347 | Time elapsed: f1.356
+Results: J'ai oublié de payer pour les boissons.
+
+2024-11-05 09:43:17 | Expected Pricing: 1.0345 | Time elapsed: f1.154
+Results: Ils pensaient tous que Tom était fou.
+
+2024-11-05 09:43:18 | Expected Pricing: 1.0315 | Time elapsed: f1.437
+Results: Es-tu toujours marié ?
+
+2024-11-05 09:43:19 | Expected Pricing: 1.0284 | Time elapsed: f1.25
+Results: Vas.
+
+2024-11-05 09:43:21 | Expected Pricing: 1.0437 | Time elapsed: f1.594
+Results: Pour votre propre sécurité, ne montez jamais dans une voiture avec un conducteur ivre.
+
+2024-11-05 09:43:23 | Expected Pricing: 1.0374 | Time elapsed: f1.86
+Results: Merci de m'avoir aidé à rédiger mon CV.
+
+2024-11-05 09:43:25 | Expected Pricing: 1.0422 | Time elapsed: f1.751
+Results: Pourriez-vous me dire quel est votre numéro de portable, s'il vous plaît ?
+
+2024-11-05 09:43:26 | Expected Pricing: 1.0403 | Time elapsed: f1.562
+Results: Combien de temps t'a-t-il fallu pour rédiger ce rapport ?
+
+2024-11-05 09:43:28 | Expected Pricing: 1.0355 | Time elapsed: f1.525
+Results: Je viendrai si j'ai le temps.
+
+2024-11-05 09:43:29 | Expected Pricing: 1.0368 | Time elapsed: f1.192
+Results: Je me suis rendu compte que je n'étais pas prêt.
+
+2024-11-05 09:43:30 | Expected Pricing: 1.0374 | Time elapsed: f1.239
+Results: Tom n'aurait certainement pas pu réussir sans votre aide.
+
+2024-11-05 09:43:32 | Expected Pricing: 1.0359 | Time elapsed: f1.728
+Results: Il a remis tous ses biens à son fils.
+
+2024-11-05 09:43:33 | Expected Pricing: 1.0368 | Time elapsed: f1.528
+Results: Comment puis-je passer un appel téléphonique au Japon ?
+
+2024-11-05 09:43:35 | Expected Pricing: 1.0376 | Time elapsed: f1.442
+Results: Il est dangereux de sauter sur un train en mouvement.
+
+2024-11-05 09:43:36 | Expected Pricing: 1.0368 | Time elapsed: f1.198
+Results: Réussira-t-il ou échouera-t-il ?
+
+2024-11-05 09:43:38 | Expected Pricing: 1.0384 | Time elapsed: f1.879
+Results: J'aimerais y jeter un coup d'œil de plus près.
+
+2024-11-05 09:43:39 | Expected Pricing: 1.0326 | Time elapsed: f1.494
+Results: Il est allé à la bibliothèque.
+
+2024-11-05 09:43:41 | Expected Pricing: 1.0395 | Time elapsed: f1.388
+Results: Je voulais te remercier pour ce que tu as fait aujourd'hui.
+
+2024-11-05 09:43:42 | Expected Pricing: 1.0334 | Time elapsed: f1.163
+Results: Qu'est-il devenu de ton chien ?
+
+2024-11-05 09:43:43 | Expected Pricing: 1.0357 | Time elapsed: f1.483
+Results: Je ne sais pas quel plan il essaiera.
+
+2024-11-05 09:43:45 | Expected Pricing: 1.0345 | Time elapsed: f1.818
+Results: J'ai perdu ma femme l'année dernière.
+
+2024-11-05 09:43:47 | Expected Pricing: 1.0508 | Time elapsed: f1.636
+Results: Tu dis que je devrais bien le connaître, mais en fait, je lui ai été présenté seulement la semaine dernière.
+
+2024-11-05 09:43:48 | Expected Pricing: 1.0332 | Time elapsed: f1.078
+Results: Je regrette d'y être allé.
+
+2024-11-05 09:43:50 | Expected Pricing: 1.0372 | Time elapsed: f1.817
+Results: Comment s'attendent-ils à ce que nous survivions ?
+
+2024-11-05 09:43:51 | Expected Pricing: 1.0319 | Time elapsed: f1.351
+Results: Je veux mon argent maintenant.
+
+2024-11-05 09:43:53 | Expected Pricing: 1.0410 | Time elapsed: f1.516
+Results: Tout ce que vous avez à faire, c'est appuyer sur ce bouton.
+
+2024-11-05 09:43:54 | Expected Pricing: 1.0351 | Time elapsed: f1.775
+Results: Elle fit porter la boîte au premier étage.
+
+2024-11-05 09:43:56 | Expected Pricing: 1.0361 | Time elapsed: f1.34
+Results: Y a-t-il la version sous-titrée ?
+
+2024-11-05 09:43:57 | Expected Pricing: 1.0326 | Time elapsed: f1.178
+Results: Je pense que Tom est fiable.
+
+2024-11-05 09:43:59 | Expected Pricing: 1.0382 | Time elapsed: f2.025
+Results: Ma mère aime beaucoup les tulipes et ma sœur aussi.
+
+2024-11-05 09:44:01 | Expected Pricing: 1.0391 | Time elapsed: f2.202
+Results: Elle a aidé le vieil homme à traverser la rue.
+
+2024-11-05 09:44:03 | Expected Pricing: 1.0372 | Time elapsed: f1.635
+Results: Elle a eu de la chance de réussir l'examen.
+
+2024-11-05 09:44:04 | Expected Pricing: 1.0307 | Time elapsed: f1.39
+Results: T'ont-ils aperçu ?
+
+2024-11-05 09:44:06 | Expected Pricing: 1.0357 | Time elapsed: f1.603
+Results: Avez-vous un proverbe similaire en français ?
+
+2024-11-05 09:44:07 | Expected Pricing: 1.0349 | Time elapsed: f1.031
+Results: Veux-tu du sucre dans ton café ?
+
+2024-11-05 09:44:08 | Expected Pricing: 1.0345 | Time elapsed: f1.217
+Results: Je pensais que tu ne savais pas ça.
+
+2024-11-05 09:44:09 | Expected Pricing: 1.0336 | Time elapsed: f1.176
+Results: J'ai une thèse à écrire.
+
+2024-11-05 09:44:10 | Expected Pricing: 1.0330 | Time elapsed: f1.33
+Results: Es-tu allé voir un médecin ?
+
+2024-11-05 09:44:12 | Expected Pricing: 1.0343 | Time elapsed: f1.495
+Results: Aucune charge n'a été déposée.
+
+2024-11-05 09:44:13 | Expected Pricing: 1.0334 | Time elapsed: f1.377
+Results: C'est exactement ce qu'il voulait.
+
+2024-11-05 09:44:14 | Expected Pricing: 1.0357 | Time elapsed: f1.119
+Results: Es-tu sûr que c'est une bonne idée ?
+
+2024-11-05 09:44:16 | Expected Pricing: 1.0315 | Time elapsed: f1.826
+Results: J'ai besoin de savoir.
+
+2024-11-05 09:44:18 | Expected Pricing: 1.0309 | Time elapsed: f1.484
+Results: Je le pense aussi.
+
+2024-11-05 09:44:19 | Expected Pricing: 1.0345 | Time elapsed: f1.184
+Results: Elle pouvait sentir ses genoux trembler.
+
+2024-11-05 09:44:21 | Expected Pricing: 1.0336 | Time elapsed: f1.898
+Results: La moitié des élèves sont absents.
+
+2024-11-05 09:44:23 | Expected Pricing: 1.0370 | Time elapsed: f1.928
+Results: Tu ne peux pas dire que je n'ai pas essayé.
+
+2024-11-05 09:44:24 | Expected Pricing: 1.0368 | Time elapsed: f1.303
+Results: Elle l'a évité chaque fois que cela était possible.
+
+2024-11-05 09:44:25 | Expected Pricing: 1.0311 | Time elapsed: f1.0
+Results: Étudie sérieusement.
+
+2024-11-05 09:44:26 | Expected Pricing: 1.0305 | Time elapsed: f0.968
+Results: Trouve un emploi.
+
+2024-11-05 09:44:27 | Expected Pricing: 1.0296 | Time elapsed: f1.132
+Results: Comment est Tom ?
+
+2024-11-05 09:44:29 | Expected Pricing: 1.0351 | Time elapsed: f1.602
+Results: Le sang était d'un rouge éclatant.
+
+2024-11-05 09:44:31 | Expected Pricing: 1.0319 | Time elapsed: f1.853
+Results: Tu es dégoûtant.
+
+2024-11-05 09:44:32 | Expected Pricing: 1.0349 | Time elapsed: f1.072
+Results: Je me réveille à 7 heures.
+
+2024-11-05 09:44:34 | Expected Pricing: 1.0397 | Time elapsed: f1.922
+Results: Tu ne sais pas pourquoi Tom n'est pas venu hier, si ?
+
+2024-11-05 09:44:35 | Expected Pricing: 1.0340 | Time elapsed: f1.691
+Results: J'ai une faveur à te demander.
+
+2024-11-05 09:44:37 | Expected Pricing: 1.0393 | Time elapsed: f1.802
+Results: Tom a posé de nombreuses questions à Marie sur la vie à Boston.
+
+2024-11-05 09:44:39 | Expected Pricing: 1.0435 | Time elapsed: f1.905
+Results: La seule chose qui compte vraiment, c'est de savoir si tu es heureux ou non.
+
+2024-11-05 09:44:40 | Expected Pricing: 1.0376 | Time elapsed: f1.203
+Results: Il va rarement, voire jamais, à l'église.
+
+2024-11-05 09:44:42 | Expected Pricing: 1.0406 | Time elapsed: f1.851
+Results: Je n'arrive pas à croire que tout cela soit en train d'arriver.
+
+2024-11-05 09:44:43 | Expected Pricing: 1.0374 | Time elapsed: f1.235
+Results: Le petit garçon s'est lentement fait de nouveaux amis.
+
+2024-11-05 09:44:45 | Expected Pricing: 1.0349 | Time elapsed: f1.762
+Results: Tom est un peu petit pour son âge.
+
+2024-11-05 09:44:47 | Expected Pricing: 1.0334 | Time elapsed: f1.535
+Results: Je pense que tu as paniqué.
+
+2024-11-05 09:44:49 | Expected Pricing: 1.0334 | Time elapsed: f2.755
+Results: Tu ne peux pas avoir le poste.
+
+2024-11-05 09:44:51 | Expected Pricing: 1.0370 | Time elapsed: f2.019
+Results: C'est l'itinéraire le plus court vers Paris.
+
+2024-11-05 09:44:53 | Expected Pricing: 1.0359 | Time elapsed: f1.301
+Results: Je suis désolé de t'avoir fait du mal.
+
+2024-11-05 09:44:55 | Expected Pricing: 1.0361 | Time elapsed: f1.906
+Results: Elle n'a pas reçu de réponse de sa part.
+
+2024-11-05 09:44:56 | Expected Pricing: 1.0326 | Time elapsed: f1.528
+Results: Avez-vous deux ordinateurs ?
+
+2024-11-05 09:44:58 | Expected Pricing: 1.0321 | Time elapsed: f1.362
+Results: Tu aimes tout le monde.
+
+2024-11-05 09:44:59 | Expected Pricing: 1.0336 | Time elapsed: f1.282
+Results: Je n'aurais pas pu faire autrement.
+
+2024-11-05 09:45:01 | Expected Pricing: 1.0422 | Time elapsed: f2.03
+Results: Si tu en veux un, tu devras te le procurer par toi-même.
+
+2024-11-05 09:45:02 | Expected Pricing: 1.0340 | Time elapsed: f1.358
+Results: Je ne peux pas boire d'alcool.
+
+2024-11-05 09:45:04 | Expected Pricing: 1.0340 | Time elapsed: f1.932
+Results: Elle lui a conseillé de revenir immédiatement.
+
+2024-11-05 09:45:06 | Expected Pricing: 1.0338 | Time elapsed: f1.609
+Results: Tu ferais mieux de te dépêcher.
+
+2024-11-05 09:45:07 | Expected Pricing: 1.0330 | Time elapsed: f1.322
+Results: Nous allons attendre dans la voiture.
+
+2024-11-05 09:45:09 | Expected Pricing: 1.0313 | Time elapsed: f1.736
+Results: Je suis complètement d'accord.
+
+2024-11-05 09:45:11 | Expected Pricing: 1.0334 | Time elapsed: f2.011
+Results: Il s'est fait couper les cheveux.
+
+2024-11-05 09:45:12 | Expected Pricing: 1.0296 | Time elapsed: f1.111
+Results: Il est amoureux.
+
+2024-11-05 09:45:14 | Expected Pricing: 1.0296 | Time elapsed: f1.887
+Results: Comment ça va ?
+
+2024-11-05 09:45:15 | Expected Pricing: 1.0382 | Time elapsed: f1.263
+Results: Je ne sais pas de quoi tu t'inquiètes autant.
+
+2024-11-05 09:45:16 | Expected Pricing: 1.0330 | Time elapsed: f0.952
+Results: Nous avons dû reporter la réunion.
+
+2024-11-05 09:45:18 | Expected Pricing: 1.0347 | Time elapsed: f1.735
+Results: La foule a applaudi pendant plusieurs minutes.
+
+2024-11-05 09:45:19 | Expected Pricing: 1.0328 | Time elapsed: f1.06
+Results: Que veux-tu dire par là ?
+
+2024-11-05 09:45:20 | Expected Pricing: 1.0321 | Time elapsed: f1.414
+Results: Il a conseillé la prudence.
+
+2024-11-05 09:45:22 | Expected Pricing: 1.0376 | Time elapsed: f1.436
+Results: Si je peux le faire, toi aussi tu le peux.
+
+2024-11-05 09:45:25 | Expected Pricing: 1.0332 | Time elapsed: f2.986
+Results: Personne ne m'a averti.
+
+2024-11-05 09:45:26 | Expected Pricing: 1.0334 | Time elapsed: f1.525
+Results: Il a une allergie aux médicaments.
+
+2024-11-05 09:45:28 | Expected Pricing: 1.0345 | Time elapsed: f1.693
+Results: Je suis tombé sur une immense fortune.
+
+2024-11-05 09:45:29 | Expected Pricing: 1.0336 | Time elapsed: f1.073
+Results: Je ne voulais pas te blesser.
+
+2024-11-05 09:45:31 | Expected Pricing: 1.0309 | Time elapsed: f1.725
+Results: Pour qui attends-tu ?
+
+2024-11-05 09:45:32 | Expected Pricing: 1.0338 | Time elapsed: f1.508
+Results: Il porte un sac sur son dos.
+
+2024-11-05 09:45:34 | Expected Pricing: 1.0334 | Time elapsed: f1.354
+Results: L'habit fait le moine.
+
+2024-11-05 09:45:35 | Expected Pricing: 1.0309 | Time elapsed: f1.297
+Results: Que fais-tu ici ?
+
+2024-11-05 09:45:36 | Expected Pricing: 1.0317 | Time elapsed: f1.315
+Results: On dirait un rêve.
+
+2024-11-05 09:45:38 | Expected Pricing: 1.0347 | Time elapsed: f1.493
+Results: Viens ici à six heures précises.
+
+2024-11-05 09:45:39 | Expected Pricing: 1.0347 | Time elapsed: f1.507
+Results: Il est tombé dans un sommeil profond.
+
+2024-11-05 09:45:40 | Expected Pricing: 1.0326 | Time elapsed: f1.264
+Results: Elle a finalement atteint l'hôtel.
+
+2024-11-05 09:45:42 | Expected Pricing: 1.0384 | Time elapsed: f1.945
+Results: Ma grand-mère du côté de ma mère vit à Osaka.
+
+2024-11-05 09:45:44 | Expected Pricing: 1.0343 | Time elapsed: f1.994
+Results: Tu ne te soucies pas de moi.
+
+2024-11-05 09:45:46 | Expected Pricing: 1.0353 | Time elapsed: f1.652
+Results: Je ne t'ai pas vu jusqu'à maintenant.
+
+2024-11-05 09:45:48 | Expected Pricing: 1.0298 | Time elapsed: f1.787
+Results: Que fais-tu ?
+
+2024-11-05 09:45:49 | Expected Pricing: 1.0353 | Time elapsed: f1.443
+Results: Je ne veux même pas que tu sois là.
+
+2024-11-05 09:45:51 | Expected Pricing: 1.0330 | Time elapsed: f1.781
+Results: Vais-je pouvoir le trouver ?
+
+2024-11-05 09:45:53 | Expected Pricing: 1.0355 | Time elapsed: f1.7
+Results: Moi non plus, je n'ai rien compris.
+
+2024-11-05 09:45:55 | Expected Pricing: 1.0334 | Time elapsed: f1.918
+Results: Je n'ai pas fini avec toi.
+
+2024-11-05 09:45:56 | Expected Pricing: 1.0317 | Time elapsed: f1.329
+Results: C'était une belle nuit.
+
+2024-11-05 09:45:57 | Expected Pricing: 1.0328 | Time elapsed: f1.144
+Results: Vous ne devez pas trop manger.
+
+2024-11-05 09:45:59 | Expected Pricing: 1.0347 | Time elapsed: f1.551
+Results: Comment vais-je payer mes dettes maintenant ?
+
+2024-11-05 09:46:00 | Expected Pricing: 1.0317 | Time elapsed: f1.574
+Results: Il pourrait changer d'avis.
+
+2024-11-05 09:46:02 | Expected Pricing: 1.0372 | Time elapsed: f1.207
+Results: Le comité est composé de scientifiques et d'ingénieurs.
+
+2024-11-05 09:46:03 | Expected Pricing: 1.0334 | Time elapsed: f1.822
+Results: L'exposition était très impressionnante.
+
+2024-11-05 09:46:05 | Expected Pricing: 1.0326 | Time elapsed: f1.576
+Results: Il ne me battra jamais.
+
+2024-11-05 09:46:07 | Expected Pricing: 1.0328 | Time elapsed: f1.779
+Results: Ne parle à personne de ça.
+
+2024-11-05 09:46:08 | Expected Pricing: 1.0313 | Time elapsed: f1.572
+Results: Tu es très généreux.
+
+2024-11-05 09:46:10 | Expected Pricing: 1.0397 | Time elapsed: f1.563
+Results: Le lendemain, nous avions tous de terribles gueules de bois.
+
+2024-11-05 09:46:12 | Expected Pricing: 1.0334 | Time elapsed: f1.922
+Results: Nous avons affrété un bus.
+
+2024-11-05 09:46:14 | Expected Pricing: 1.0355 | Time elapsed: f1.988
+Results: Tu devrais prêter attention à son histoire.
+
+2024-11-05 09:46:16 | Expected Pricing: 1.0317 | Time elapsed: f1.863
+Results: Ça fait toute la différence.
+
+2024-11-05 09:46:17 | Expected Pricing: 1.0305 | Time elapsed: f1.838
+Results: Nous aimons Tom.
+
+2024-11-05 09:46:19 | Expected Pricing: 1.0294 | Time elapsed: f1.221
+Results: Appelle Tom.
+
+2024-11-05 09:46:20 | Expected Pricing: 1.0313 | Time elapsed: f1.724
+Results: Je ne pouvais pas parler.
+
+2024-11-05 09:46:21 | Expected Pricing: 1.0313 | Time elapsed: f1.09
+Results: Ce n'est pas sûr.
+
+2024-11-05 09:46:23 | Expected Pricing: 1.0324 | Time elapsed: f1.348
+Results: Ils avaient tous l'air heureux.
+
+2024-11-05 09:46:25 | Expected Pricing: 1.0403 | Time elapsed: f2.042
+Results: Quels sont les aliments que vous mangez habituellement avec du vin rouge ?
+
+2024-11-05 09:46:26 | Expected Pricing: 1.0345 | Time elapsed: f1.6
+Results: La porte s'ouvre dans la chambre.
+
+2024-11-05 09:46:29 | Expected Pricing: 1.0433 | Time elapsed: f2.103
+Results: Il a été établi par le tribunal que le témoin avait commis parjure.
+
+2024-11-05 09:46:31 | Expected Pricing: 1.0315 | Time elapsed: f1.912
+Results: L'as-tu rencontrée ?
+
+2024-11-05 09:46:32 | Expected Pricing: 1.0317 | Time elapsed: f1.592
+Results: Que signifient ces marques ?
+
+2024-11-05 09:46:34 | Expected Pricing: 1.0378 | Time elapsed: f1.684
+Results: Je me suis garé dans la rue devant chez toi.
+
+2024-11-05 09:46:36 | Expected Pricing: 1.0357 | Time elapsed: f1.923
+Results: Peux-tu le convaincre de rejoindre notre club ?
+
+2024-11-05 09:46:38 | Expected Pricing: 1.0328 | Time elapsed: f1.947
+Results: Il aime nager en été.
+
+2024-11-05 09:46:39 | Expected Pricing: 1.0393 | Time elapsed: f1.833
+Results: Cette pierre était trop lourde pour que je puisse la soulever.
+
+2024-11-05 09:46:41 | Expected Pricing: 1.0357 | Time elapsed: f1.691
+Results: Qui t'a raconté une histoire aussi ridicule ?
+
+2024-11-05 09:46:43 | Expected Pricing: 1.0506 | Time elapsed: f1.641
+Results: Pour une raison quelconque, les gens m'ont évité comme la peste depuis que je suis revenu d'Inde.
+
+2024-11-05 09:46:44 | Expected Pricing: 1.0336 | Time elapsed: f1.112
+Results: Elle ne suivrait pas mes conseils.
+
+2024-11-05 09:46:45 | Expected Pricing: 1.0324 | Time elapsed: f1.0
+Results: Nous avons fait de bons progrès.
+
+2024-11-05 09:46:46 | Expected Pricing: 1.0349 | Time elapsed: f1.46
+Results: Je ne veux pas vraiment parler de ça.
+
+2024-11-05 09:46:47 | Expected Pricing: 1.0328 | Time elapsed: f1.007
+Results: Ton problème est similaire au mien.
+
+2024-11-05 09:46:49 | Expected Pricing: 1.0374 | Time elapsed: f1.544
+Results: Cela veut-il dire que tu ne vas pas dormir ici ?
+
+2024-11-05 09:46:50 | Expected Pricing: 1.0328 | Time elapsed: f1.153
+Results: Je suis en train de cuisiner !
+
+2024-11-05 09:46:52 | Expected Pricing: 1.0391 | Time elapsed: f1.841
+Results: Tom a été attaqué par un chien quand il était enfant.
+
+2024-11-05 09:46:54 | Expected Pricing: 1.0330 | Time elapsed: f1.941
+Results: J'ai eu raison de deviner.
+
+2024-11-05 09:46:55 | Expected Pricing: 1.0317 | Time elapsed: f1.243
+Results: Ne me fais pas tuer.
+
+2024-11-05 09:46:57 | Expected Pricing: 1.0309 | Time elapsed: f1.758
+Results: Je commence à comprendre.
+
+2024-11-05 09:46:59 | Expected Pricing: 1.0389 | Time elapsed: f1.715
+Results: Tom a joué du piano pendant trois heures sans prendre de pause.
+
+2024-11-05 09:47:00 | Expected Pricing: 1.0364 | Time elapsed: f1.771
+Results: Y avait-il quelqu'un d'autre dans le bar ?
+
+2024-11-05 09:47:01 | Expected Pricing: 1.0305 | Time elapsed: f1.103
+Results: C'est hilarant.
+
+2024-11-05 09:47:03 | Expected Pricing: 1.0345 | Time elapsed: f1.732
+Results: J'adore la façon dont tu embrasses.
+
+2024-11-05 09:47:05 | Expected Pricing: 1.0355 | Time elapsed: f2.117
+Results: Tom a gagné trente mille dollars la semaine dernière.
+
+2024-11-05 09:47:07 | Expected Pricing: 1.0317 | Time elapsed: f1.741
+Results: Elle aime lire des livres.
+
+2024-11-05 09:47:08 | Expected Pricing: 1.0319 | Time elapsed: f1.015
+Results: Elle voulait sortir quand même.
+
+2024-11-05 09:47:10 | Expected Pricing: 1.0315 | Time elapsed: f1.718
+Results: Je t'ai déçu.
+
+2024-11-05 09:47:11 | Expected Pricing: 1.0305 | Time elapsed: f1.593
+Results: C'est ma fille.
+
+2024-11-05 09:47:13 | Expected Pricing: 1.0321 | Time elapsed: f1.999
+Results: Que voudrais-tu faire demain ?
+
+2024-11-05 09:47:15 | Expected Pricing: 1.0330 | Time elapsed: f1.469
+Results: Comment as-tu obtenu cette peinture ?
+
+2024-11-05 09:47:16 | Expected Pricing: 1.0313 | Time elapsed: f1.122
+Results: Nous vous protégeons.
+
+2024-11-05 09:47:18 | Expected Pricing: 1.0317 | Time elapsed: f1.91
+Results: Je préfère être à Boston.
+
+2024-11-05 09:47:19 | Expected Pricing: 1.0384 | Time elapsed: f1.457
+Results: Des milliers de personnes se déplaçaient dans la place.
+
+2024-11-05 09:47:21 | Expected Pricing: 1.0313 | Time elapsed: f1.42
+Results: Nous t'avons attrapé.
+
+2024-11-05 09:47:23 | Expected Pricing: 1.0326 | Time elapsed: f1.742
+Results: Les gens ne disent plus ça.
+
+2024-11-05 09:47:24 | Expected Pricing: 1.0345 | Time elapsed: f1.691
+Results: Je pense que tu devrais voir ça.
+
+2024-11-05 09:47:26 | Expected Pricing: 1.0378 | Time elapsed: f1.652
+Results: Le visage d'une personne en dit long sur son caractère.
+
+2024-11-05 09:47:28 | Expected Pricing: 1.0336 | Time elapsed: f1.992
+Results: Les criminels doivent être punis.
+
+2024-11-05 09:47:30 | Expected Pricing: 1.0334 | Time elapsed: f1.925
+Results: Contre qui sommes-nous en compétition ?
+
+2024-11-05 09:47:31 | Expected Pricing: 1.0384 | Time elapsed: f1.202
+Results: L'argent devrait être distribué à ceux qui en ont besoin.
+
+2024-11-05 09:47:32 | Expected Pricing: 1.0349 | Time elapsed: f1.122
+Results: Veux-tu que je mélange les cartes ?
+
+2024-11-05 09:47:34 | Expected Pricing: 1.0313 | Time elapsed: f1.575
+Results: Nous sommes trop occupés.
+
+2024-11-05 09:47:35 | Expected Pricing: 1.0319 | Time elapsed: f1.211
+Results: Je veux bien le faire.
+
+2024-11-05 09:47:37 | Expected Pricing: 1.0324 | Time elapsed: f1.717
+Results: Tu n'es pas si fou.
+
+2024-11-05 09:47:39 | Expected Pricing: 1.0418 | Time elapsed: f2.097
+Results: J'essaie de mettre un peu d'argent à la banque chaque mois.
+
+2024-11-05 09:47:40 | Expected Pricing: 1.0376 | Time elapsed: f1.151
+Results: J'hésite à aborder le sujet avec elle.
+
+2024-11-05 09:47:42 | Expected Pricing: 1.0349 | Time elapsed: f1.726
+Results: J'ai peur que tu te perdes.
+
+2024-11-05 09:47:43 | Expected Pricing: 1.0357 | Time elapsed: f1.713
+Results: Je ne lis pas beaucoup ce genre de livre.
+
+2024-11-05 09:47:45 | Expected Pricing: 1.0347 | Time elapsed: f1.658
+Results: Penses-tu que Tom peut le trouver ?
+
+2024-11-05 09:47:47 | Expected Pricing: 1.0315 | Time elapsed: f1.822
+Results: C'est une langue difficile.
+
+2024-11-05 09:47:48 | Expected Pricing: 1.0342 | Time elapsed: f1.589
+Results: Il va te conduire à l'aéroport.
+
+2024-11-05 09:47:49 | Expected Pricing: 1.0351 | Time elapsed: f0.983
+Results: Je ne suis pas encore si désespéré.
+
+2024-11-05 09:47:51 | Expected Pricing: 1.0307 | Time elapsed: f1.26
+Results: Cette pièce est comfortable.
+
+2024-11-05 09:47:52 | Expected Pricing: 1.0387 | Time elapsed: f1.503
+Results: Ce n'est qu'hier que j'ai su son nom.
+
+2024-11-05 09:47:54 | Expected Pricing: 1.0315 | Time elapsed: f1.579
+Results: Où sont vos gens ?
+
+2024-11-05 09:47:55 | Expected Pricing: 1.0338 | Time elapsed: f1.126
+Results: D'où viens-tu avec tout ça ?
+
+2024-11-05 09:47:57 | Expected Pricing: 1.0353 | Time elapsed: f1.658
+Results: Dis à Tom ce que Mary t'a dit.
+
+2024-11-05 09:47:58 | Expected Pricing: 1.0330 | Time elapsed: f1.182
+Results: Que veux-tu que je dise ?
+
+2024-11-05 09:48:00 | Expected Pricing: 1.0437 | Time elapsed: f2.032
+Results: Le garçon est tombé de la bicyclette et s'est fracturé le crâne.
+
+2024-11-05 09:48:01 | Expected Pricing: 1.0412 | Time elapsed: f1.438
+Results: J'ai mille dollars en chèques de voyage et cinq cents en espèces.
+
+2024-11-05 09:48:03 | Expected Pricing: 1.0357 | Time elapsed: f1.555
+Results: Pouvez-vous nous donner votre point de vue ?
+
+2024-11-05 09:48:04 | Expected Pricing: 1.0366 | Time elapsed: f1.189
+Results: Tu te crois assez drôle, n'est-ce pas ?
+
+2024-11-05 09:48:05 | Expected Pricing: 1.0361 | Time elapsed: f1.296
+Results: Je suis désolé pour ce que j'ai fait.
+
+2024-11-05 09:48:06 | Expected Pricing: 1.0334 | Time elapsed: f1.155
+Results: Calme-toi, mon fils.
+
+2024-11-05 09:48:08 | Expected Pricing: 1.0309 | Time elapsed: f1.181
+Results: Je te laisse ça.
+
+2024-11-05 09:48:09 | Expected Pricing: 1.0330 | Time elapsed: f1.746
+Results: Je voulais juste aider l'équipe.
+
+2024-11-05 09:48:11 | Expected Pricing: 1.0384 | Time elapsed: f1.622
+Results: Ce genre de flatterie ne vous mènera nulle part.
+
+2024-11-05 09:48:12 | Expected Pricing: 1.0315 | Time elapsed: f1.273
+Results: Ils sont encore des enfants.
+
+2024-11-05 09:48:14 | Expected Pricing: 1.0347 | Time elapsed: f1.333
+Results: Je ne peux pas te dire quoi faire.
+
+2024-11-05 09:48:15 | Expected Pricing: 1.0347 | Time elapsed: f1.838
+Results: Je ne te donnerai plus d'argent.
+
+2024-11-05 09:48:17 | Expected Pricing: 1.0336 | Time elapsed: f1.842
+Results: J'ai peur que Tom se perde.
+
+2024-11-05 09:48:19 | Expected Pricing: 1.0326 | Time elapsed: f1.945
+Results: De grands progrès ont été réalisés.
+
+2024-11-05 09:48:21 | Expected Pricing: 1.0426 | Time elapsed: f1.793
+Results: Tom dit qu'il pourrait teindre son bouc en rouge et vert pour Noël.
+
+2024-11-05 09:48:22 | Expected Pricing: 1.0353 | Time elapsed: f1.131
+Results: Mon cousin est accro à l'héroïne.
+
+2024-11-05 09:48:24 | Expected Pricing: 1.0389 | Time elapsed: f1.449
+Results: Assurez-vous d'éteindre la lumière en sortant.
+
+2024-11-05 09:48:25 | Expected Pricing: 1.0315 | Time elapsed: f1.173
+Results: Il est hors de position.
+
+2024-11-05 09:48:26 | Expected Pricing: 1.0368 | Time elapsed: f1.719
+Results: Où est le couvercle de la poêle ?
+
+2024-11-05 09:48:28 | Expected Pricing: 1.0326 | Time elapsed: f1.068
+Results: Tom a souligné mon erreur.
+
+2024-11-05 09:48:29 | Expected Pricing: 1.0370 | Time elapsed: f1.078
+Results: Je ne peux pas être ce que je ne suis pas.
+
+2024-11-05 09:48:30 | Expected Pricing: 1.0324 | Time elapsed: f1.513
+Results: Comment peux-tu te concentrer ?
+
+2024-11-05 09:48:31 | Expected Pricing: 1.0324 | Time elapsed: f0.977
+Results: Tom était génial ce soir.
+
+2024-11-05 09:48:33 | Expected Pricing: 1.0351 | Time elapsed: f1.753
+Results: Laissez-moi vous conduire à la gare.
+
+2024-11-05 09:48:34 | Expected Pricing: 1.0334 | Time elapsed: f1.329
+Results: Il fait assez chaud pour nager.
+
+2024-11-05 09:48:36 | Expected Pricing: 1.0326 | Time elapsed: f1.849
+Results: Je pense que je le comprends.
+
+2024-11-05 09:48:37 | Expected Pricing: 1.0307 | Time elapsed: f0.97
+Results: Tu peux le faire.
+
+2024-11-05 09:48:38 | Expected Pricing: 1.0380 | Time elapsed: f1.293
+Results: Peux-tu s'il te plaît traduire cela pour moi ?
+
+2024-11-05 09:48:40 | Expected Pricing: 1.0334 | Time elapsed: f1.336
+Results: Cette poupée a de grands yeux.
+
+2024-11-05 09:48:41 | Expected Pricing: 1.0338 | Time elapsed: f1.448
+Results: J'allais faire une sieste.
+
+2024-11-05 09:48:43 | Expected Pricing: 1.0336 | Time elapsed: f1.746
+Results: Il a demandé conseil à son ami.
+
+2024-11-05 09:48:45 | Expected Pricing: 1.0307 | Time elapsed: f1.837
+Results: Est-ce un compliment ?
+
+2024-11-05 09:48:46 | Expected Pricing: 1.0334 | Time elapsed: f1.725
+Results: Elle a peur du tonnerre.
+
+2024-11-05 09:48:48 | Expected Pricing: 1.0313 | Time elapsed: f1.513
+Results: Ne te lève pas.
+
+2024-11-05 09:48:49 | Expected Pricing: 1.0334 | Time elapsed: f1.44
+Results: Je me suis occupé de tout.
+
+2024-11-05 09:48:51 | Expected Pricing: 1.0334 | Time elapsed: f1.761
+Results: Cela pourrait être de gros ennuis.
+
+2024-11-05 09:48:52 | Expected Pricing: 1.0384 | Time elapsed: f1.258
+Results: J'aimerais vous accompagner, si cela ne vous dérange pas.
+
+2024-11-05 09:48:54 | Expected Pricing: 1.0370 | Time elapsed: f2.091
+Results: La jambe de Tom a été gravement brûlée.
+
+2024-11-05 09:48:56 | Expected Pricing: 1.0338 | Time elapsed: f1.923
+Results: Je servirai de guide pour vous.
+
+2024-11-05 09:48:58 | Expected Pricing: 1.0406 | Time elapsed: f1.905
+Results: Je ne mange de la viande qu'environ trois ou quatre fois par mois.
+
+2024-11-05 09:49:00 | Expected Pricing: 1.0353 | Time elapsed: f1.44
+Results: J'ai gardé le meilleur pour la fin.
+
+2024-11-05 09:49:01 | Expected Pricing: 1.0324 | Time elapsed: f1.269
+Results: N'oublie pas ton téléphone.
+
+2024-11-05 09:49:02 | Expected Pricing: 1.0305 | Time elapsed: f0.998
+Results: C'est très bon.
+
+2024-11-05 09:49:03 | Expected Pricing: 1.0347 | Time elapsed: f1.031
+Results: J'ai vu mon reflet dans la fenêtre.
+
+2024-11-05 09:49:04 | Expected Pricing: 1.0376 | Time elapsed: f1.256
+Results: Elle était trop petite pour voir par-dessus la clôture.
+
+2024-11-05 09:49:05 | Expected Pricing: 1.0330 | Time elapsed: f1.106
+Results: Il n'y a pas de temps.
+
+2024-11-05 09:49:07 | Expected Pricing: 1.0387 | Time elapsed: f1.388
+Results: Nous devrions respecter les croyances des uns et des autres.
+
+2024-11-05 09:49:09 | Expected Pricing: 1.0336 | Time elapsed: f1.706
+Results: C'est moi qui l'ai rencontré.
+
+2024-11-05 09:49:10 | Expected Pricing: 1.0332 | Time elapsed: f1.905
+Results: Je sais que Tom a triché.
+
+2024-11-05 09:49:12 | Expected Pricing: 1.0374 | Time elapsed: f1.85
+Results: Les non-membres paient 50 dollars supplémentaires.
+
+2024-11-05 09:49:14 | Expected Pricing: 1.0315 | Time elapsed: f1.554
+Results: Ils ont expulsé Tom.
+
+2024-11-05 09:49:15 | Expected Pricing: 1.0378 | Time elapsed: f1.341
+Results: Tom ne savait pas où Marie avait mis ses valises.
+
+2024-11-05 09:49:17 | Expected Pricing: 1.0315 | Time elapsed: f1.461
+Results: Ça m'appartient.
+
+2024-11-05 09:49:18 | Expected Pricing: 1.0366 | Time elapsed: f1.304
+Results: Selon le thermomètre, il fait trente degrés.
+
+2024-11-05 09:49:20 | Expected Pricing: 1.0433 | Time elapsed: f2.247
+Results: Tous les mots soulignés en rouge doivent être vérifiés pour l'orthographe.
+
+2024-11-05 09:49:22 | Expected Pricing: 1.0317 | Time elapsed: f1.78
+Results: Je vais me marier.
+
+2024-11-05 09:49:24 | Expected Pricing: 1.0437 | Time elapsed: f1.889
+Results: J'aimerais qu'on me laisse seul un moment, si cela ne vous dérange pas.
+
+2024-11-05 09:49:26 | Expected Pricing: 1.0359 | Time elapsed: f1.81
+Results: Tu n'as vraiment pas de clue, si ?
+
+2024-11-05 09:49:27 | Expected Pricing: 1.0353 | Time elapsed: f1.629
+Results: Mary est restée éveillée tard hier soir.
+
+2024-11-05 09:49:29 | Expected Pricing: 1.0307 | Time elapsed: f1.802
+Results: Que cherches-tu ?
+
+2024-11-05 09:49:32 | Expected Pricing: 1.0313 | Time elapsed: f2.684
+Results: C'est une promesse.
+
+2024-11-05 09:49:33 | Expected Pricing: 1.0326 | Time elapsed: f1.606
+Results: Ils ont fait la bonne chose.
+
+2024-11-05 09:49:35 | Expected Pricing: 1.0336 | Time elapsed: f1.515
+Results: Tom a suivi Marie dans la pièce.
+
+2024-11-05 09:49:36 | Expected Pricing: 1.0324 | Time elapsed: f1.225
+Results: Elle ne sera pas ravie.
+
+2024-11-05 09:49:37 | Expected Pricing: 1.0355 | Time elapsed: f1.102
+Results: Tu n'étais pas obligé de venir si tôt.
+
+2024-11-05 09:49:39 | Expected Pricing: 1.0364 | Time elapsed: f1.721
+Results: Je te soutiendrai quoi qu'il arrive.
+
+2024-11-05 09:49:41 | Expected Pricing: 1.0387 | Time elapsed: f1.625
+Results: Arrête de lire des bandes dessinées pendant que tu travailles.
+
+2024-11-05 09:49:42 | Expected Pricing: 1.0364 | Time elapsed: f1.899
+Results: Les paupières de Tom étaient à moitié ouvertes.
+
+2024-11-05 09:49:44 | Expected Pricing: 1.0326 | Time elapsed: f1.25
+Results: Écoutez, vous tous.
+
+2024-11-05 09:49:46 | Expected Pricing: 1.0338 | Time elapsed: f2.246
+Results: Que penses-tu de ces chaussures ?
+
+2024-11-05 09:49:47 | Expected Pricing: 1.0315 | Time elapsed: f1.466
+Results: Je ressens ta douleur.
+
+2024-11-05 09:49:49 | Expected Pricing: 1.0332 | Time elapsed: f1.653
+Results: Ne blamez pas le messager.
+
+2024-11-05 09:49:50 | Expected Pricing: 1.0317 | Time elapsed: f1.349
+Results: C'est une personne fiable.
+
+2024-11-05 09:49:52 | Expected Pricing: 1.0336 | Time elapsed: f1.981
+Results: Tu es trop sensible à la critique.
+
+2024-11-05 09:49:54 | Expected Pricing: 1.0296 | Time elapsed: f1.383
+Results: Ils veulent ça.
+
+2024-11-05 09:49:55 | Expected Pricing: 1.0343 | Time elapsed: f1.071
+Results: Je pensais que tu étais plus grand.
+
+2024-11-05 09:49:57 | Expected Pricing: 1.0366 | Time elapsed: f1.816
+Results: Je lui dirai ça quand il viendra ici.
+
+2024-11-05 09:49:58 | Expected Pricing: 1.0336 | Time elapsed: f1.699
+Results: J'ai oublié où était la voiture.
+
+2024-11-05 09:50:00 | Expected Pricing: 1.0414 | Time elapsed: f1.244
+Results: Hier, mon vélo a été volé pendant que je faisais des courses.
+
+2024-11-05 09:50:01 | Expected Pricing: 1.0307 | Time elapsed: f1.536
+Results: Je dois y aller.
+
+2024-11-05 09:50:03 | Expected Pricing: 1.0380 | Time elapsed: f1.694
+Results: Je pense que je vais jeter un coup d'œil autour.
+
+2024-11-05 09:50:04 | Expected Pricing: 1.0361 | Time elapsed: f1.302
+Results: Cesse d'être si gentil(le) avec moi.
+
+2024-11-05 09:50:06 | Expected Pricing: 1.0364 | Time elapsed: f1.321
+Results: Chaque homme ne peut pas être un bon pianiste.
+
+2024-11-05 09:50:07 | Expected Pricing: 1.0355 | Time elapsed: f1.837
+Results: Je ne l'ai jamais fait comme ça auparavant.
+
+2024-11-05 09:50:09 | Expected Pricing: 1.0317 | Time elapsed: f1.339
+Results: As-tu lu l'article ?
+
+2024-11-05 09:50:10 | Expected Pricing: 1.0366 | Time elapsed: f1.803
+Results: J'ai le temps, donc je vais le faire.
+
+2024-11-05 09:50:12 | Expected Pricing: 1.0389 | Time elapsed: f1.428
+Results: Je ne suis plus jeune, mais je peux encore mordre.
+
+2024-11-05 09:50:13 | Expected Pricing: 1.0370 | Time elapsed: f1.416
+Results: Je ne pensais pas que tu étais à la maison.
+
+2024-11-05 09:50:15 | Expected Pricing: 1.0305 | Time elapsed: f1.445
+Results: Tu es le professeur.
+
+2024-11-05 09:50:17 | Expected Pricing: 1.0347 | Time elapsed: f1.881
+Results: Je suis entièrement d'accord avec vous tous.
+
+2024-11-05 09:50:18 | Expected Pricing: 1.0315 | Time elapsed: f1.374
+Results: Cela ressemble à du thé.
+
+2024-11-05 09:50:20 | Expected Pricing: 1.0317 | Time elapsed: f1.934
+Results: Il a été licencié.
+
+2024-11-05 09:50:22 | Expected Pricing: 1.0414 | Time elapsed: f1.534
+Results: Ce n’est pas tous les jours qu'on reçoit un bâtiment à son nom.
+
+2024-11-05 09:50:23 | Expected Pricing: 1.0366 | Time elapsed: f1.098
+Results: Je pense que Tom veut quelque chose sur quoi écrire.
+
+2024-11-05 09:50:24 | Expected Pricing: 1.0305 | Time elapsed: f1.698
+Results: C'est un crime.
+
+2024-11-05 09:50:26 | Expected Pricing: 1.0334 | Time elapsed: f1.346
+Results: Je suis pratiquement un expert maintenant.
+
+2024-11-05 09:50:27 | Expected Pricing: 1.0307 | Time elapsed: f1.571
+Results: Il se plaint constamment.
+
+2024-11-05 09:50:29 | Expected Pricing: 1.0355 | Time elapsed: f1.651
+Results: Ne viens pas dans ma chambre sans frapper.
+
+2024-11-05 09:50:30 | Expected Pricing: 1.0326 | Time elapsed: f1.132
+Results: Elle m'a donné une montre.
+
+2024-11-05 09:50:31 | Expected Pricing: 1.0328 | Time elapsed: f1.444
+Results: J'ai acheté deux pantalons.
+
+2024-11-05 09:50:33 | Expected Pricing: 1.0343 | Time elapsed: f1.916
+Results: C'est tout ce qu'il y a ?
+
+2024-11-05 09:50:35 | Expected Pricing: 1.0389 | Time elapsed: f2.074
+Results: Je suis désolé, mais il n'est pas à la maison.
+
+2024-11-05 09:50:37 | Expected Pricing: 1.0313 | Time elapsed: f1.811
+Results: Nous sommes tous des étudiants.
+
+2024-11-05 09:50:39 | Expected Pricing: 1.0347 | Time elapsed: f1.635
+Results: J'ai perdu dix kilos en trois mois.
+
+2024-11-05 09:50:41 | Expected Pricing: 1.0307 | Time elapsed: f1.916
+Results: Comment êtes-vous connecté ?
+
+2024-11-05 09:50:42 | Expected Pricing: 1.0332 | Time elapsed: f1.216
+Results: Cette fenêtre ne s'ouvre pas.
+
+2024-11-05 09:50:43 | Expected Pricing: 1.0313 | Time elapsed: f0.969
+Results: Il était stupéfait.
+
+2024-11-05 09:50:45 | Expected Pricing: 1.0343 | Time elapsed: f1.62
+Results: Rien n'est accompli sans effort.
+
+2024-11-05 09:50:46 | Expected Pricing: 1.0313 | Time elapsed: f1.837
+Results: Je vais essayer à nouveau.
+
+2024-11-05 09:50:48 | Expected Pricing: 1.0353 | Time elapsed: f1.34
+Results: Le village se trouve au-delà de ces arbres.
+
+2024-11-05 09:50:49 | Expected Pricing: 1.0315 | Time elapsed: f1.282
+Results: Tu es déloyal.
+
+2024-11-05 09:50:51 | Expected Pricing: 1.0321 | Time elapsed: f1.788
+Results: Je dois te parler immédiatement.
+
+2024-11-05 09:50:52 | Expected Pricing: 1.0361 | Time elapsed: f1.397
+Results: Nous nous soucions tous les uns des autres.
+
+2024-11-05 09:50:54 | Expected Pricing: 1.0359 | Time elapsed: f1.557
+Results: C'est la maison dans laquelle il est né.
+
+2024-11-05 09:50:55 | Expected Pricing: 1.0376 | Time elapsed: f1.238
+Results: Ne pourrions-nous pas nous blottir, plutôt ?
+
+2024-11-05 09:50:56 | Expected Pricing: 1.0303 | Time elapsed: f1.283
+Results: Nous obéirons.
+
+2024-11-05 09:50:58 | Expected Pricing: 1.0393 | Time elapsed: f1.177
+Results: La poudre à canon doit être manipulée avec beaucoup de précaution.
+
+2024-11-05 09:50:59 | Expected Pricing: 1.0334 | Time elapsed: f1.365
+Results: Fumer est une mauvaise habitude.
+
+2024-11-05 09:51:00 | Expected Pricing: 1.0324 | Time elapsed: f1.579
+Results: Pourquoi ne peux-tu pas venir ?
+
+2024-11-05 09:51:02 | Expected Pricing: 1.0328 | Time elapsed: f1.902
+Results: Il écrit rarement à son père.
+
+2024-11-05 09:51:04 | Expected Pricing: 1.0315 | Time elapsed: f1.976
+Results: Je ne parle pas allemand.
+
+2024-11-05 09:51:06 | Expected Pricing: 1.0378 | Time elapsed: f1.912
+Results: Je suppose qu'il vaut mieux que je m'en aille.
+
+2024-11-05 09:51:08 | Expected Pricing: 1.0349 | Time elapsed: f1.716
+Results: La France avait de nombreuses colonies en Afrique.
+
+2024-11-05 09:51:10 | Expected Pricing: 1.0370 | Time elapsed: f2.002
+Results: Tom dit à Marie qu'il n'est pas marié.
+
+2024-11-05 09:51:11 | Expected Pricing: 1.0305 | Time elapsed: f1.113
+Results: C'est pour moi.
+
+2024-11-05 09:51:12 | Expected Pricing: 1.0340 | Time elapsed: f1.282
+Results: Oublie ce que j'ai dit.
+
+2024-11-05 09:51:14 | Expected Pricing: 1.0378 | Time elapsed: f1.562
+Results: Je rendrai le livre dès que je le pourrai.
+
+2024-11-05 09:51:16 | Expected Pricing: 1.0511 | Time elapsed: f1.579
+Results: Je sais que certains d'entre vous veulent revenir à la façon dont les choses étaient, mais cela ne va pas se produire.
+
+2024-11-05 09:51:17 | Expected Pricing: 1.0353 | Time elapsed: f1.395
+Results: Connaissez-vous des mythes grecs ?
+
+2024-11-05 09:51:19 | Expected Pricing: 1.0326 | Time elapsed: f1.861
+Results: Je viens de recevoir ton email.
+
+2024-11-05 09:51:20 | Expected Pricing: 1.0361 | Time elapsed: f1.285
+Results: Je ne pense pas qu'ils nous aient entendus.
+
+2024-11-05 09:51:22 | Expected Pricing: 1.0370 | Time elapsed: f1.894
+Results: Il ne parle jamais à moins qu'on ne lui parle.
+
+2024-11-05 09:51:23 | Expected Pricing: 1.0458 | Time elapsed: f1.231
+Results: Je pensais que les choses s'amélioreraient, mais en réalité, elles s'aggravent.
+
+2024-11-05 09:51:25 | Expected Pricing: 1.0447 | Time elapsed: f1.393
+Results: Combien d'années s'est écoulé depuis la dernière fois que je t'ai vu ?
+
+2024-11-05 09:51:26 | Expected Pricing: 1.0357 | Time elapsed: f1.438
+Results: Ils ne devaient jamais revenir dans leur pays.
+
+2024-11-05 09:51:27 | Expected Pricing: 1.0351 | Time elapsed: f1.12
+Results: Elle n'a pas pu réprimer ses émotions.
+
+2024-11-05 09:51:29 | Expected Pricing: 1.0336 | Time elapsed: f1.535
+Results: Tu as dû penser à quelque chose.
+
+2024-11-05 09:51:30 | Expected Pricing: 1.0393 | Time elapsed: f1.506
+Results: Elle n'a pas assez d'âge pour obtenir un permis de conduire.
+
+2024-11-05 09:51:32 | Expected Pricing: 1.0330 | Time elapsed: f1.926
+Results: Je l'expliquerai plus tard.
+
+2024-11-05 09:51:33 | Expected Pricing: 1.0338 | Time elapsed: f0.98
+Results: Tu aurais dû être plus prudent.
+
+2024-11-05 09:51:35 | Expected Pricing: 1.0298 | Time elapsed: f1.492
+Results: Voici vos clés.
+
+2024-11-05 09:51:36 | Expected Pricing: 1.0313 | Time elapsed: f1.472
+Results: Elle est très contrariée.
+
+2024-11-05 09:51:37 | Expected Pricing: 1.0307 | Time elapsed: f1.205
+Results: Tu parles boulot ?
+
+2024-11-05 09:51:39 | Expected Pricing: 1.0347 | Time elapsed: f1.954
+Results: Personne ne va te faire de mal.
+
+2024-11-05 09:51:41 | Expected Pricing: 1.0328 | Time elapsed: f1.481
+Results: Je veux continuer à travailler ici.
+
+2024-11-05 09:51:42 | Expected Pricing: 1.0324 | Time elapsed: f1.672
+Results: Ils ne représentent pas une menace.
+
+2024-11-05 09:51:44 | Expected Pricing: 1.0296 | Time elapsed: f1.465
+Results: Nous devons intervenir.
+
+2024-11-05 09:51:46 | Expected Pricing: 1.0345 | Time elapsed: f1.769
+Results: Tom et Mary ont tous deux dit non.
+
+2024-11-05 09:51:47 | Expected Pricing: 1.0382 | Time elapsed: f1.545
+Results: Il y a beaucoup de gens qui ne m'aiment pas.
+
+2024-11-05 09:51:49 | Expected Pricing: 1.0393 | Time elapsed: f2.06
+Results: Ce que vous avez dit ne s'applique pas à ce cas.
+
+2024-11-05 09:51:51 | Expected Pricing: 1.0395 | Time elapsed: f2.025
+Results: Il était le seul à ne pas avoir été invité à la fête.
+
+2024-11-05 09:51:53 | Expected Pricing: 1.0347 | Time elapsed: f2.053
+Results: Je n'aime pas quand tu jures.
+
+2024-11-05 09:51:55 | Expected Pricing: 1.0357 | Time elapsed: f1.86
+Results: Tu es avec moi ou tu es contre moi.
+
+2024-11-05 09:51:56 | Expected Pricing: 1.0380 | Time elapsed: f1.159
+Results: Ne t'inquiète pas. Je m'en occupe.
+
+2024-11-05 09:51:58 | Expected Pricing: 1.0378 | Time elapsed: f1.567
+Results: Il est allé jusqu'à m'accuser de mentir.
+
+2024-11-05 09:52:00 | Expected Pricing: 1.0332 | Time elapsed: f1.704
+Results: Détends-toi un moment.
+
+2024-11-05 09:52:01 | Expected Pricing: 1.0328 | Time elapsed: f1.279
+Results: Tom est trop jeune pour cela.
+
+2024-11-05 09:52:03 | Expected Pricing: 1.0330 | Time elapsed: f1.863
+Results: Tu es très compréhensif.
+
+2024-11-05 09:52:04 | Expected Pricing: 1.0406 | Time elapsed: f1.172
+Results: Les piqûres d'abeilles peuvent être très douloureuses.
+
+2024-11-05 09:52:05 | Expected Pricing: 1.0334 | Time elapsed: f1.373
+Results: Nous nous abonnons à un journal.
+
+2024-11-05 09:52:06 | Expected Pricing: 1.0315 | Time elapsed: f1.062
+Results: Donne-moi ton adresse.
+
+2024-11-05 09:52:08 | Expected Pricing: 1.0305 | Time elapsed: f1.122
+Results: Je veux des faits.
+
+2024-11-05 09:52:09 | Expected Pricing: 1.0334 | Time elapsed: f1.322
+Results: Ça n'a jamais été une option.
+
+2024-11-05 09:52:10 | Expected Pricing: 1.0370 | Time elapsed: f1.568
+Results: Arrête d'essayer de me remonter le moral.
+
+2024-11-05 09:52:12 | Expected Pricing: 1.0319 | Time elapsed: f1.95
+Results: Tu viens à ma fête ?
+
+2024-11-05 09:52:14 | Expected Pricing: 1.0395 | Time elapsed: f1.987
+Results: Je pense simplement que tu devrais faire attention, c'est tout.
+
+2024-11-05 09:52:16 | Expected Pricing: 1.0347 | Time elapsed: f1.506
+Results: Merci beaucoup. J'apprécie cela.
+
+2024-11-05 09:52:18 | Expected Pricing: 1.0345 | Time elapsed: f1.879
+Results: Je peux à peine attendre jusqu'à demain.
+
+2024-11-05 09:52:19 | Expected Pricing: 1.0334 | Time elapsed: f1.214
+Results: Mettez la question par écrit.
+
+2024-11-05 09:52:21 | Expected Pricing: 1.0345 | Time elapsed: f2.011
+Results: Je suis très triste d'apprendre cela.
+
+2024-11-05 09:52:23 | Expected Pricing: 1.0336 | Time elapsed: f1.673
+Results: Joues-tu dans un groupe ?
+
+2024-11-05 09:52:24 | Expected Pricing: 1.0326 | Time elapsed: f1.193
+Results: Des milliers de personnes étaient là.
+
+2024-11-05 09:52:26 | Expected Pricing: 1.0326 | Time elapsed: f1.684
+Results: As-tu déjà donné ton sang ?
+
+2024-11-05 09:52:27 | Expected Pricing: 1.0324 | Time elapsed: f1.593
+Results: Je ne peux pas le sentir.
+
+2024-11-05 09:52:28 | Expected Pricing: 1.0359 | Time elapsed: f1.04
+Results: Jouons aux échecs une autre fois.
+
+2024-11-05 09:52:30 | Expected Pricing: 1.0332 | Time elapsed: f1.702
+Results: La neige a cessé de tomber.
+
+2024-11-05 09:52:32 | Expected Pricing: 1.0370 | Time elapsed: f1.948
+Results: Shanghai est surnommée le Paris de l'Est.
+
+2024-11-05 09:52:35 | Expected Pricing: 1.0372 | Time elapsed: f3.306
+Results: Es-tu encore contrarié par ce qui s'est passé ?
+
+2024-11-05 09:52:37 | Expected Pricing: 1.0342 | Time elapsed: f1.747
+Results: Nous nous parlions tout le temps.
+
+2024-11-05 09:52:38 | Expected Pricing: 1.0357 | Time elapsed: f1.581
+Results: J'ai toujours pensé que tu savais nager.
+
+2024-11-05 09:52:40 | Expected Pricing: 1.0336 | Time elapsed: f1.923
+Results: Je voudrais que tu aies ceci.
+
+2024-11-05 09:52:42 | Expected Pricing: 1.0380 | Time elapsed: f1.685
+Results: En cas d'urgence, quel numéro devrais-je appeler ?
+
+2024-11-05 09:52:43 | Expected Pricing: 1.0317 | Time elapsed: f1.423
+Results: Tom a beaucoup d'argent.
+
+2024-11-05 09:52:45 | Expected Pricing: 1.0343 | Time elapsed: f1.564
+Results: Tu ne fais pas assez d'exercice.
+
+2024-11-05 09:52:47 | Expected Pricing: 1.0336 | Time elapsed: f1.635
+Results: Je vais peut-être réessayer.
+
+2024-11-05 09:52:48 | Expected Pricing: 1.0326 | Time elapsed: f1.721
+Results: Ils ont travaillé toute la nuit.
+
+2024-11-05 09:52:50 | Expected Pricing: 1.0353 | Time elapsed: f1.197
+Results: Je suis préoccupé par la sécurité de Tom.
+
+2024-11-05 09:52:52 | Expected Pricing: 1.0330 | Time elapsed: f2.009
+Results: Nous n'avons que embrassé.
+
+2024-11-05 09:52:53 | Expected Pricing: 1.0315 | Time elapsed: f1.473
+Results: Ce n'est pas grave.
+
+2024-11-05 09:52:55 | Expected Pricing: 1.0416 | Time elapsed: f1.578
+Results: Quand le printemps arrive, ils retournent les champs et sèment des graines.
+
+2024-11-05 09:52:56 | Expected Pricing: 1.0357 | Time elapsed: f1.216
+Results: Je me sens pire aujourd'hui qu'hier.
+
+2024-11-05 09:52:58 | Expected Pricing: 1.0321 | Time elapsed: f1.803
+Results: C'est quelque chose de nouveau.
+
+2024-11-05 09:52:59 | Expected Pricing: 1.0326 | Time elapsed: f1.44
+Results: C'est là, à gauche.
+
+2024-11-05 09:53:01 | Expected Pricing: 1.0378 | Time elapsed: f1.763
+Results: Je pense que le moment est venu de présenter ce produit.
+
+2024-11-05 09:53:02 | Expected Pricing: 1.0338 | Time elapsed: f1.161
+Results: Nous avons trois arbres dans notre jardin.
+
+2024-11-05 09:53:03 | Expected Pricing: 1.0336 | Time elapsed: f1.425
+Results: Je dois emprunter de l'argent.
+
+2024-11-05 09:53:05 | Expected Pricing: 1.0319 | Time elapsed: f1.056
+Results: Tu es en train de perdre.
+
+2024-11-05 09:53:06 | Expected Pricing: 1.0313 | Time elapsed: f1.354
+Results: Il a de l'argent.
+
+2024-11-05 09:53:08 | Expected Pricing: 1.0307 | Time elapsed: f2.246
+Results: Va dans ta chambre !
+
+2024-11-05 09:53:09 | Expected Pricing: 1.0345 | Time elapsed: f1.05
+Results: Je suis allé là-bas pour le rencontrer.
+
+2024-11-05 09:53:11 | Expected Pricing: 1.0324 | Time elapsed: f1.778
+Results: Je suppose que tu as raison.
+
+2024-11-05 09:53:13 | Expected Pricing: 1.0406 | Time elapsed: f1.792
+Results: S'il avait entendu la nouvelle, il aurait peut-être été choqué.
+
+2024-11-05 09:53:15 | Expected Pricing: 1.0355 | Time elapsed: f1.84
+Results: Penses-tu que tu seras ici demain ?
+
+2024-11-05 09:53:16 | Expected Pricing: 1.0307 | Time elapsed: f1.009
+Results: Tu devras conduire.
+
+2024-11-05 09:53:17 | Expected Pricing: 1.0305 | Time elapsed: f1.405
+Results: La pratique rend parfait.
+
+2024-11-05 09:53:19 | Expected Pricing: 1.0370 | Time elapsed: f1.826
+Results: Il s'est excusé de l'avoir offensée.
+
+2024-11-05 09:53:20 | Expected Pricing: 1.0406 | Time elapsed: f1.069
+Results: L'écologie est l'étude des êtres vivants qui nous entourent.
+
+2024-11-05 09:53:22 | Expected Pricing: 1.0326 | Time elapsed: f1.821
+Results: Je vais m'en occuper.
+
+2024-11-05 09:53:23 | Expected Pricing: 1.0336 | Time elapsed: f1.42
+Results: Ils ont tous ri de leur erreur.
+
+2024-11-05 09:53:25 | Expected Pricing: 1.0336 | Time elapsed: f1.887
+Results: Il se sent faible après sa maladie.
+
+2024-11-05 09:53:27 | Expected Pricing: 1.0382 | Time elapsed: f1.89
+Results: Est-ce que Tom t'a dit où se trouve la fête ?
+
+2024-11-05 09:53:29 | Expected Pricing: 1.0336 | Time elapsed: f1.878
+Results: J'ai un peu d'argent maintenant.
+
+2024-11-05 09:53:31 | Expected Pricing: 1.0340 | Time elapsed: f1.986
+Results: Ils sont fâchés contre toi.
+
+2024-11-05 09:53:33 | Expected Pricing: 1.0343 | Time elapsed: f1.832
+Results: Tu n'as pas l'air si bien.
+
+2024-11-05 09:53:34 | Expected Pricing: 1.0321 | Time elapsed: f1.258
+Results: Tu manques d'imagination.
+
+2024-11-05 09:53:35 | Expected Pricing: 1.0395 | Time elapsed: f1.428
+Results: Y a-t-il quelque chose en particulier que tu souhaites regarder ?
+
+2024-11-05 09:53:37 | Expected Pricing: 1.0445 | Time elapsed: f1.801
+Results: Au moment où j'ai pris le bébé dans mes bras, il a commencé à pleurer.
+
+2024-11-05 09:53:39 | Expected Pricing: 1.0317 | Time elapsed: f1.59
+Results: L'as-tu déjà rencontré ?
+
+2024-11-05 09:53:41 | Expected Pricing: 1.0336 | Time elapsed: f1.92
+Results: J'ai travaillé dur pour cet argent.
+
+2024-11-05 09:53:42 | Expected Pricing: 1.0338 | Time elapsed: f1.33
+Results: Je serai ravi de travailler avec vous.
+
+2024-11-05 09:53:44 | Expected Pricing: 1.0319 | Time elapsed: f1.651
+Results: Mon nez coulait beaucoup.
+
+2024-11-05 09:53:45 | Expected Pricing: 1.0345 | Time elapsed: f1.587
+Results: Nous habitons près d'une grande bibliothèque.
+
+2024-11-05 09:53:47 | Expected Pricing: 1.0317 | Time elapsed: f1.625
+Results: Je m'en suis chargé.
+
+2024-11-05 09:53:48 | Expected Pricing: 1.0353 | Time elapsed: f1.424
+Results: J'ai mangé une salade pour le déjeuner.
+
+2024-11-05 09:53:50 | Expected Pricing: 1.0324 | Time elapsed: f1.344
+Results: Notre travail n'en finit jamais.
+
+2024-11-05 09:53:51 | Expected Pricing: 1.0370 | Time elapsed: f1.206
+Results: Devine de qui c'est l'anniversaire aujourd'hui.
+
+2024-11-05 09:53:52 | Expected Pricing: 1.0296 | Time elapsed: f1.144
+Results: Je pourrais aider.
+
+2024-11-05 09:53:54 | Expected Pricing: 1.0324 | Time elapsed: f1.654
+Results: Je n'aime pas le sable.
+
+2024-11-05 09:53:55 | Expected Pricing: 1.0317 | Time elapsed: f1.328
+Results: Que portes-tu ce soir ?
+
+2024-11-05 09:53:57 | Expected Pricing: 1.0393 | Time elapsed: f1.878
+Results: Tom a immigré en Australie à l'âge de trente ans.
+
+2024-11-05 09:53:58 | Expected Pricing: 1.0347 | Time elapsed: f1.51
+Results: Où est le reste de l'argent ?
+
+2024-11-05 09:53:59 | Expected Pricing: 1.0336 | Time elapsed: f1.078
+Results: Il a fait une plaisanterie.
+
+2024-11-05 09:54:01 | Expected Pricing: 1.0368 | Time elapsed: f1.356
+Results: Après une longue dispute, j'ai finalement cédé.
+
+2024-11-05 09:54:02 | Expected Pricing: 1.0326 | Time elapsed: f1.495
+Results: Cela pourrait faire un peu mal.
+
+2024-11-05 09:54:04 | Expected Pricing: 1.0307 | Time elapsed: f1.847
+Results: Nous savons tout cela.
+
+2024-11-05 09:54:06 | Expected Pricing: 1.0347 | Time elapsed: f2.032
+Results: Tu devrais appeler tes parents plus souvent.
+
+2024-11-05 09:54:08 | Expected Pricing: 1.0343 | Time elapsed: f1.61
+Results: Il n'y avait pas de taxis disponibles.
+
+2024-11-05 09:54:09 | Expected Pricing: 1.0305 | Time elapsed: f1.502
+Results: Il aime la chasse.
+
+2024-11-05 09:54:11 | Expected Pricing: 1.0368 | Time elapsed: f1.936
+Results: Strictement parlant, la terre n'est pas ronde.
+
+2024-11-05 09:54:13 | Expected Pricing: 1.0389 | Time elapsed: f1.764
+Results: Quoi que tu dises, la réponse est "non."
+
+2024-11-05 09:54:14 | Expected Pricing: 1.0355 | Time elapsed: f1.498
+Results: Un arbre tombé obstruait la route.
+
+2024-11-05 09:54:16 | Expected Pricing: 1.0321 | Time elapsed: f1.429
+Results: Nous allons essayer à nouveau.
+
+2024-11-05 09:54:18 | Expected Pricing: 1.0355 | Time elapsed: f1.665
+Results: L'argent est la dernière chose qu'il souhaite.
+
+2024-11-05 09:54:19 | Expected Pricing: 1.0403 | Time elapsed: f1.866
+Results: Il y a un besoin urgent de professeurs ayant un diplôme en sciences.
+
+2024-11-05 09:54:21 | Expected Pricing: 1.0330 | Time elapsed: f1.753
+Results: Tom et Mary se connaissent bien.
+
+2024-11-05 09:54:23 | Expected Pricing: 1.0355 | Time elapsed: f1.319
+Results: J'étais trop occupé pour t'écrire.
+
+2024-11-05 09:54:24 | Expected Pricing: 1.0324 | Time elapsed: f1.888
+Results: Cela pourrait être n'importe quoi.
+
+2024-11-05 09:54:26 | Expected Pricing: 1.0334 | Time elapsed: f1.669
+Results: Devrais-je laver la laitue ?
+
+2024-11-05 09:54:28 | Expected Pricing: 1.0370 | Time elapsed: f1.668
+Results: En fait, je ne suis pas tout à fait sûr.
+
+2024-11-05 09:54:30 | Expected Pricing: 1.0349 | Time elapsed: f1.925
+Results: Il doit son succès uniquement à la chance.
+
+2024-11-05 09:54:31 | Expected Pricing: 1.0336 | Time elapsed: f1.23
+Results: Personne n'a jamais vu Dieu.
+
+2024-11-05 09:54:32 | Expected Pricing: 1.0364 | Time elapsed: f1.536
+Results: Peut-être qu'il sera un bon enseignant.
+
+2024-11-05 09:54:34 | Expected Pricing: 1.0380 | Time elapsed: f1.958
+Results: Ma femme n'est pas belle. La vôtre l'est.
+
+2024-11-05 09:54:36 | Expected Pricing: 1.0317 | Time elapsed: f1.175
+Results: C'était plutôt amusant.
+
+2024-11-05 09:54:37 | Expected Pricing: 1.0372 | Time elapsed: f1.74
+Results: Ses chances de gagner beaucoup d'argent sont excellentes.
+
+2024-11-05 09:54:39 | Expected Pricing: 1.0324 | Time elapsed: f1.935
+Results: Elle a commencé à chanter.
+
+2024-11-05 09:54:41 | Expected Pricing: 1.0347 | Time elapsed: f1.483
+Results: Un homme est venu vous voir hier soir.
+
+2024-11-05 09:54:42 | Expected Pricing: 1.0328 | Time elapsed: f1.329
+Results: Ce travail est difficile pour nous.
+
+2024-11-05 09:54:44 | Expected Pricing: 1.0332 | Time elapsed: f1.426
+Results: Venez au centre-ville avec nous.
+
+2024-11-05 09:54:45 | Expected Pricing: 1.0391 | Time elapsed: f1.25
+Results: Je n'avais aucune idée que tu étais si dévoué.
+
